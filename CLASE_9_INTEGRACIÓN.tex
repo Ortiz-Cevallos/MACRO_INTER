@@ -1,0 +1,227 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+%\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+%\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize INTEGRACIÓN A LOS MERCADOS DE CAPITALES: ANTECEDENTES } {}}
+	Desde los 70 una serie de eventos han hecho el supuesto de libre movilidad de mercados de capitales una realidad:
+	
+	\begin{itemize}
+		\item El quiebre de Bretton-Woods y la consecuencias de remoción en controles de capitales en algunas economías de Europa como la Alemana.
+		\item La alta inflación de USA junto a la aplicación de la regulación financiera Q, que provocó un rápido crecimiento en el mercado de moneda europea (eurodollar).
+		\item Avances tecnológicos en los procesos de información.
+		\item Desregulación de los mercados en los 80.
+		\item La unificación económica y monetaria de Europa.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[label=2]
+	\frametitle{{\normalsize MIDIENDO EL GRADO DE MOVILIDAD DE CAPITAL: F-H HIPÓTESIS } {}}
+En \cite{Feldstein79} con una muestra de 16 países para el período 1960-1974 para el promedio del ratio ahorro a producto ($\frac{S_{i}}{PIB_{i}}$)  obtienen la siguiente regresión: 
+
+\begin{align}
+\frac{I_{i}}{PIB_{i}}&=0.035+0.887\frac{S_{i}}{PIB_{i}} \nonumber
+\end{align}
+
+Su hipótesis es que en presencia de libre movilidad de capitales la relación entre la inversión y el ahorro debería ser cercana a cero y por tanto sus resultados es evidencia de la baja movilidad de capitales.
+
+\end{frame}
+
+
+\begin{frame}[plain, label=3]
+	\frametitle{{\normalsize MIDIENDO EL GRADO DE MOVILIDAD DE CAPITAL: F-H HIPÓTESIS } {}}
+	La justificación de F-H  HIPÓTESIS viene dado por la identidad:
+	\begin{align}
+	CA&=S-I \nonumber
+	\end{align}
+	\begin{figure}[H]
+	\renewcommand{\figurename}{Figura}
+	\caption{\sc Respuesta de S y I a cambios independientes}
+	\begin{minipage}[t]{0.48\textwidth}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.45]
+			\draw[-] (0,0)  -- (8,0)  node[right] {{\tiny$S,I$}}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r_{1}$}};
+			\draw[smooth, domain = 6.5:0.25, color=black]
+			plot (\x,{7-\x}) node[right] {{\tiny$I(r_{1}) $}};
+			\draw[smooth, domain = 0.75:6.75, color=black]
+			plot (\x,{0.75+\x}) node[right] {{\tiny$S^{0}(r_{1}) $}};
+			\draw[smooth, domain = 1.75:6.75, color=blue]
+			plot (\x,{-1.5+\x}) node[right] {{\tiny$S^{1}(r_{1}) $}};
+			\draw[dotted, domain = 0:8, color=black]
+			plot (\x,{2}); 
+			\node[left] at (0,2) {$r^{*}$};
+			\draw[dotted, domain = 2:0, color=black]
+			plot (1.25,{\x}); 
+			\node[below] at (1.25,0) {{\tiny$S^{0}$}};
+			\draw[dotted, domain = 2:0, color=black]
+			plot (3.5,{\x}); 
+			\node[below] at (3.5,0) {{\tiny$S^{1}$}};
+			\draw[dotted, domain = 2:0, color=black]
+			plot (5,{\x}); 
+			\node[below] at (5,0) {{\tiny$I^{0}$}};
+			\end{tikzpicture}
+		\end{center}		
+	\end{minipage} \hfill \begin{minipage}[t]{0.48\textwidth}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.45]
+		\draw[-] (0,0)  -- (8,0)  node[right] {{\tiny$S,I$}}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r_{1}$}};
+		\draw[smooth, domain = 6.5:0.25, color=black]
+		plot (\x,{7-\x}) node[right] {{\tiny$I^{0}(r_{1}) $}};
+		\draw[smooth, domain = 0.75:6.75, color=black]
+		plot (\x,{0.75+\x}) node[right] {{\tiny$S(r_{1}) $}};
+		\draw[smooth, domain = 8.5:1, color=blue]
+		plot (\x,{9-\x}) node[right] {{\tiny$I^{1}(r_{1}) $}};
+		\draw[dotted, domain = 0:8, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$r^{*}$};
+		\draw[dotted, domain = 2:0, color=black]
+		plot (1.25,{\x}); 
+		\node[below] at (1.25,0) {{\tiny$S^{0}$}};
+		\draw[dotted, domain = 2:0, color=black]
+		plot (7,{\x}); 
+		\node[below] at (7,0) {{\tiny$I^{1}$}};
+		\draw[dotted, domain = 2:0, color=black]
+		plot (5,{\x}); 
+		\node[below] at (5,0) {{\tiny$I^{0}$}};
+		\end{tikzpicture}
+	\end{center}
+\end{minipage}
+\label{IV_G4}
+\end{figure}
+
+
+	Noten que la economía sin libre movilidad de capitales la CA es siempre cero y por tanto $S=I$; en contraste para una economía pequeña y abierta la tasa de interés es exógena y por tanto si el ahorro y la inversión es afectada por factores independiente su correlación es cero.
+	
+	
+\end{frame}
+
+\begin{frame}[plain,label=4]
+	\frametitle{{\normalsize F-H HIPÓTESIS: Críticas } {}}
+	La primera crítica es que aún en presencia de libre movilidad de mercados de capitales, pueden haber una fuerte asociación entre ahorro e inversión dado que ambos pueden verse afectados por factores idénticos. 
+	\begin{block}{Ejemplo}
+		Dada las funciones de producción para los períodos 1 y 2:
+		\begin{align}
+		Q_{1}&=A_{1}F(k_{1})\nonumber\\
+		Q_{2}&=A_{2}F(k_{2})\nonumber
+		\end{align}
+		Ahora asuma que $A_{1}$ se ve afectado por un choque positivo $\epsilon_{1}$ el cual determina el choque en el período 2 bajo el proceso $\epsilon_{2}=\rho\epsilon_{1} $ con $ 0<\rho<1$
+		Entonces:
+		\begin{align}
+		E_{1}A_{2}\uparrow\rightarrow k_{2}\uparrow\rightarrow I_{1}\uparrow \nonumber\\
+		E_{1}A_{2}\uparrow\rightarrow S_{1}\downarrow\nonumber\\
+		A_{1}\uparrow\rightarrow Q_{1}\uparrow\rightarrow S_{1}\uparrow\nonumber\\
+		\dfrac{\delta S_{1}}{\delta A_{1}}>	\dfrac{\delta S_{1}}{\delta E_{1}A_{2}}\nonumber	
+		\end{align}
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}[plain,label=5]
+	\frametitle{{\normalsize F-H HIPÓTESIS: Críticas } {}}
+	La segunda crítica es que aún en presencia de libre movilidad de mercados de capitales, pueden haber una fuerte asociación entre ahorro e inversión si se trata de una economía grande. 
+
+\begin{figure}[H]
+	\renewcommand{\figurename}{Figura}
+	\caption{\sc Ahorro, Inversión y Cuenta Corriente}
+	\begin{minipage}[t]{0.48\textwidth}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.48]
+			\draw[-] (0,0)  -- (8,0)  node[right] {{\tiny$S,I$}}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r$}};
+			\draw[smooth, domain = 0.75:7.5, color=black]
+			plot (\x,{8.5-\x}) node[right] {{\tiny$I(r) $}};
+			\draw[smooth, domain = 0.25:7, color=black]
+			plot (\x,{0+\x}) node[right] {{\tiny$S(r) $}};
+			\draw[smooth, domain = 2.25:8, color=blue]
+			plot (\x,{-2+\x}) node[right] {{\tiny$S^{'}(r) $}};
+			\draw[dotted, domain = 0:7, color=black]
+			plot (\x,{2.5}); 
+			\node[left] at (0,2.5) {$r^{*1}$};
+			\draw[dotted, domain = 0:7, color=black]
+			plot (\x,{3.5}); 
+			\node[left] at (0,3.5) {$r^{*}$};
+			\draw[dotted, domain = 2.5:0, color=black]
+			plot (3.5,{\x}); 
+			\node[below] at (3.5,0) {{\tiny$S$}};
+			\draw[dotted, domain = 2.5:0, color=black]
+			plot (4.5,{\x}); 
+			\node[below] at (4.5,0) {{\tiny$S^{'}$}};
+			\draw[dotted, domain = 3.5:0, color=black]
+			plot (5,{\x}); 
+			\node[below] at (5,0) {{\tiny$I$}};
+			\draw[dotted, domain = 2.5:0, color=black]
+			plot (6,{\x}); 
+			\node[below] at (6,0) {{\tiny$I^{'}$}};
+			\end{tikzpicture}
+		\end{center}		
+	\end{minipage} \hfill \begin{minipage}[t]{0.48\textwidth}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.48]
+		\draw[-] (-4,0)  -- (4,0)  node[right] {{\tiny $CA$}}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r$}};
+		\draw[smooth, domain = -3:4, color=blue]
+		plot (\x,{3.5+\x}) node[right] {{\tiny $CA^{'}(r) $}};
+		\draw[smooth, domain = -4:3.0, color=black]
+		plot (\x,{5.17+\x}) node[right] {{\tiny $CA(r) $}};
+		\draw[dotted, domain = -4:0, color=black]
+		plot (\x,{2.5}); 
+		\node[right] at (0,2.5) {$r^{*1}$};
+		\draw[dotted, domain = -4:0, color=black]
+		plot (\x,{3.5}); 
+		\node[right] at (0,3.5) {$r^{*}$};
+		\draw[smooth, domain = 0:-4, color=black]
+		plot (\x,{1-1.5*\x}) node[right] {{\tiny$CA^{RW}(r) $}};
+		\node[below] at (-4,0) {{\tiny$CA^{RW}$}};
+		\end{tikzpicture}
+	\end{center}
+\end{minipage}
+\label{IV_G2}
+\end{figure}
+
+	
+\end{frame}
+
+
+\end{document}

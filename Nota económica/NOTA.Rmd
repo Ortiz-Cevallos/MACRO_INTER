@@ -1,0 +1,34 @@
+---
+documentclass: article
+lang: es
+papersize: letter
+fontsize: 12pt
+output: 
+    pdf_document:
+      latex_engine:  xelatex
+      includes:
+        #before_body: PORTADA.sty
+        in_header:   PAQUETES.sty
+        after_body: ANEXOS1.Rmd
+    keep_tex: yes
+    number_sections: true
+    toc_depth: 4
+    mainfont: Futura Lt BT
+---
+
+```{r include=FALSE, cache=FALSE}
+library(knitr)
+```
+
+
+```{r child = 'DOCUMENTO_2.Rmd'}
+```
+
+
+\section*{Referencias}
+
+
+\printbibliography[heading=none]
+
+
+

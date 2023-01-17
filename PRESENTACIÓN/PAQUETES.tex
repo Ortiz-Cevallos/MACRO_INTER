@@ -1,0 +1,86 @@
+\usepackage{pgfpages}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{textpos}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+%\usepackage{fontspec}
+%\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+%\setmainfont[BoldFont={Futura Md BT}]{Futura Lt BT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{math}
+\usetikzlibrary{shadings}
+\usetikzlibrary{chains,matrix,scopes,decorations.shapes,arrows,shapes}
+\definecolor{secmcablue}{RGB}{8,78,155}
+\definecolor{secmcagold}{RGB}{231,183,13}
+\useoutertheme{miniframes}
+\useinnertheme{rectangles}
+\setbeamercolor{section in head/foot}{bg=secmcablue,fg=secmcablue}
+\setbeamercolor{frametitle}{bg=white,fg=secmcablue}
+\setbeamertemplate{footline}[text line]{\hspace{-0.085\paperwidth} {\color{secmcagold}\rule{0.06\textwidth}{0.06\textwidth}}\hspace{0.85\paperwidth}}
+\setbeamercolor{itemize item}{bg=secmcablue,fg=secmcablue}
+\setbeamercolor{itemize subitem}{bg=secmcablue,fg=secmcablue}
+\setbeamercolor{section in toc}{bg=secmcablue,fg=secmcablue}
+\setbeamercolor{section number projected}{fg=secmcablue,bg=secmcagold}
+\beamertemplatenavigationsymbolsempty
+
+%------------------------------------------------------------------------
+% for passing temporary notes
+\usepackage{todonotes}
+\usepackage{morefloats}
+\usepackage{float}
+% highlighting
+\usepackage{soul}
+% referencing mutliple things with a single command - \cref
+\usepackage{cleveref}
+% to be able to include latex comments
+\newenvironment{dummy}{}{}
+\newcommand{\espacio}{\vspace{0.5cm}}
+%  Este bloque define una diapositiva que aparece cuando hay sección nueva
+%
+\AtBeginPart{}
+\AtBeginSection{}
+\AtBeginSubsection{}
+\AtBeginSubsubsection{}
+\setlength{\emergencystretch}{0em}
+\setlength{\parskip}{0pt}
+%-------------------------------------------------------------------------------
+
+%BIBLIOGRAFÍA
+\usepackage[%
+bibstyle=authoryear,%
+citestyle=authoryear,%
+sorting=nyt,%
+backend=bibtex,%
+url=false,%
+uniquename=false,%
+doi=false,%
+maxnames=3,
+maxbibnames=5,
+bibencoding=utf8%
+]{biblatex}
+\addbibresource{REFERENCIA.bib}
+\DefineBibliographyStrings{spanish}{
+andothers={et~al.\adddot}
+}
+%=========================================================================
+%
+%  COMMANDS FOR PRESENTATION MODE
+%
+
+%=========================================================================
+%

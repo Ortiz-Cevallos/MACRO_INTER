@@ -1,0 +1,141 @@
+\appendix
+\clearpage
+\restoregeometry 
+\section{{\normalsize Anexos}}
+\subsection*{{\normalsize A.1\hspace{0.3cm} Resultados test de raíz unitaria}}
+\label{A}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\hspace{0.1cm}A.\arabic{figure}}
+\renewcommand{\thetable}{\hspace{0.1cm}A.\arabic{table}}
+\begin{table}[H] 
+\centering 
+\caption{Test de raíz unitaria sobre los procesos de las variables incluidas en VAR utilizando las remesas recibidas por El Salvador} 
+\label{anex_1} 
+\scalebox{0.8}{
+\begin{tabular}{|M{5.0cm}|M{4.0cm}|M{4.0cm}|M{4.0cm}|M{4.0cm}|}
+\hline
+\multirow{2}{*}{Variable}     &  \multicolumn{2}{|c|}{Proceso}  
+& \multicolumn{2}{|c|}{Dickey-Fuller test}\\
+                              & Intercepto     & Tendencia   
+& \multicolumn{2}{|c|}{Estadístico}\\ 
+\hline
+ $\Delta y_{i,t}$                    & No             & No   
+& \multicolumn{2}{|c|}{4.85}\\
+ $\Delta y_{i,t}$                    & Si             & No   
+& \multicolumn{2}{|c|}{6.08}\\ 
+$\Delta y_{i,t}$                     & Si             & Si   
+& \multicolumn{2}{|c|}{5.99}\\ 
+$\Delta x_{i,t}$                    & No             & No   
+& \multicolumn{2}{|c|}{29.9}\\
+$\Delta x_{i,t}$                    & Si             & No   
+& \multicolumn{2}{|c|}{34.1}\\ 
+$\Delta x_{i,t}$                     & Si             & Si   
+& \multicolumn{2}{|c|}{34.0}\\ 
+$u_{i,t}$                            & No             & No   
+& \multicolumn{2}{|c|}{0.482}\\
+ $u_{i,t}$                           & Si             & No   
+& \multicolumn{2}{|c|}{2.71}\\ 
+$u_{i,t}$                            & Si             & Si   
+& \multicolumn{2}{|c|}{2.64}\\ 
+\hline
+\multirow{2}{*}{Variable}     &  \multicolumn{2}{|c|}{Proceso}  
+& \multicolumn{2}{|c|}{KPSS test}\\
+                              & Intercepto     & Tendencia   
+& \multicolumn{2}{|c|}{Estadístico}\\ 
+\hline
+ $\Delta y_{i,t}$                    & No             & No   
+& \multicolumn{2}{|c|}{1.24$^{*}$}\\
+ $\Delta y_{i,t}$                    & Si             & No   
+& \multicolumn{2}{|c|}{0.121$^{*}$}\\ 
+$\Delta y_{i,t}$                     & Si             & Si   
+& \multicolumn{2}{|c|}{0.12$^{*}$}\\ 
+$\Delta x_{i,t}$                    & No             & No   
+& \multicolumn{2}{|c|}{0.98 $^{*}$}\\
+$\Delta x_{i,t}$                    & Si             & No   
+& \multicolumn{2}{|c|}{0.0469$^{*}$}\\ 
+$\Delta x_{i,t}$                     & Si             & Si   
+& \multicolumn{2}{|c|}{0.0402$^{*}$}\\ 
+$u_{i,t}$                            & No             & No   
+& \multicolumn{2}{|c|}{0.331$^{*}$}\\
+ $u_{i,t}$                           & Si             & No   
+& \multicolumn{2}{|c|}{0.165$^{*}$}\\ 
+$u_{i,t}$                            & Si             & Si   
+& \multicolumn{2}{|c|}{0.094$^{*}$}\\ 
+\hline
+\end{tabular}
+}
+\end{table} 
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Nota:} En el test Dickey-Fuller la hipótesis nula es que la serie es estacionaria. En el test \textcite{Pesaran} la hipótesis nula es que existe raíz unitaria. El nivel de rechazo de las hipótesis nulas son indicados con asteriscos según la regla: $*\;si\;p<0.1,\;**\;si\;p<0.05\;y\;***\;si\;p<0.01$.}\end{singlespace}
+\vspace{-0.6cm}{\footnotesize{\bf Fuente:} Elaboración propia.}
+
+\newpage
+
+\subsection*{{\normalsize A.2\hspace{0.3cm} Selección de rezagos para el VAR utilizando las remesas recibidas por El Salvador}}
+\label{A_2}
+
+\begin{table}[H] \centering 
+\caption{Selección de rezagos para el VAR utilizando las remesas recibidas por El Salvador}
+\label{anex_2} 
+\vspace{-0.2cm}
+\scalebox{0.9}{
+  \begin{tabular}{@{\extracolsep{5pt}}|M{3.0cm}|M{4.0cm}M{4.0cm}M{4.0cm}|} 
+  \hline  
+  Rezago & \multicolumn{3}{c|}{Criterio} \\ 
+  \hline 
+  & AIC  & HQC & \bf{BIC}\\
+  \hline 
+  1 & 7.726104 & 7.880251 & 8.114644\\
+  \bf{2} & 7.022930 & 7.292687 & \bf{7.702875}\\
+  3 & 6.742022 & 7.127390 & 7.713373\\
+  4 & 6.488567 & 6.989545 & 7.751323\\
+  5 & 6.312381 & 6.928969 & 7.866542 \\
+  6 & 6.254860 & 6.987057 & 8.100426 \\
+  7 & 6.365916 & 7.213724 & 8.502888\\
+  8 & 6.048688 & 7.012106 & 8.477064 \\
+  \hline 
+  \end{tabular} 
+}
+\end{table} 
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Nota:} AIC se refiere al criterio de información de Akaike, HQC se refiere al criterio de información de Hannan–Quinn  y BIC se refiere al criterio de información Bayesiano. En negitas la elección del rezago en el VAR según el BIC.}\end{singlespace}
+\vspace{-0.4cm}{\footnotesize{\bf Fuente:} Elaboración propia.}
+
+\newpage
+
+\subsection*{{\normalsize A.3\hspace{0.3cm}Estimación del VAR utilizando las remesas recibidas por El Salvador}}
+\label{A_3}
+
+\begin{table}[H] \centering 
+  \caption{Estimación del VAR utilizando las remesas recibidas por El Salvador}
+  \label{anex_3} 
+\vspace{-0.2cm}
+\scalebox{0.9}{
+\begin{tabular}{@{\extracolsep{5pt}}|M{3.0cm}M{4.0cm}M{4.0cm}M{4.0cm}|} 
+\hline  
+& Tasa de crecimiento real de las remesas ($\hat{ \Delta y_{t}}$)  & Tasa de crecimiento real de las transferencias corrientes del gobierno de EUA ($\hat{ \Delta x_{t}}$) & Tasa de desempleo latino en EUA ($\hat{u_{t}}$)   \\ 
+\hline 
+$\Delta y_{t-1}$ & 0.754$^{***}$ & 0.266 & $-$0.034 \\ 
+          & (0.134)     & (0.186) & (0.031)  \\ 
+$\Delta y_{t-2}$ & 0.053 & $-$0.525$^{***}$ & $-$0.028 \\ 
+  & (0.130) & (0.180) & (0.030) \\ 
+$\Delta x_{t-1}$ & 0.478$^{***}$ & $-$0.952$^{***}$ & $-$0.027 \\ 
+  & (0.084) & (0.117) & (0.019) \\ 
+$\Delta x_{t-2}$ & $-$0.086 & $-$0.709$^{***}$ & $-$0.009 \\ 
+  & (0.092) & (0.128) & (0.021) \\ 
+$u_{t-1}$ & $-$0.939 & 3.624$^{***}$ & 0.836$^{***}$ \\ 
+  & (0.733) & (1.020) & (0.167) \\ 
+$u_{t-2}$ & 1.403$^{*}$ & $-$4.217$^{***}$ & $-$0.014 \\ 
+  & (0.714) & (0.993) & (0.163) \\ 
+  Intercepto & $-$3.113 & 8.219$^{**}$ & 1.637$^{***}$ \\ 
+  & (2.350) & (3.269) & (0.537) \\ 
+ \hline \\[-1.8ex] 
+R$^{2}$ Ajustado & 0.617 & 0.468 & 0.793 \\ 
+F Estadístico & 21.918$^{***}$  & 12.443$^{***}$ & 50.897$^{***}$ \\ 
+Muestra    & \multicolumn{3}{c|}{Trimestre I 2002 a
+Trimestre I 2022} \\ 
+\hline 
+\end{tabular} 
+}
+\end{table} 
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Nota:} Los Errores estándares por estimador se encuentran entre paréntesis. El valor p bajo la hipótesis nula ($H_{0}$) definidas como: 1. cada estimador es igual a cero y 2. en conjunto los regresores no explican a la variable dependiente (dado por el estadístico F),  son indicados con asteriscos según la regla: $*\;si\;p<0.1,\;**\;si\;p<0.05\;y\;***\;si\;p<0.01$.}\end{singlespace}
+\vspace{-0.4cm}{\footnotesize{\bf Fuente:} Elaboración propia.}

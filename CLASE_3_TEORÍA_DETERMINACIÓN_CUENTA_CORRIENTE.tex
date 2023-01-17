@@ -1,0 +1,608 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+%\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+%\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{block} {Objetivo}
+	Conocer como cambia la balanza comercial y la cuenta corriente de una economía pequeña y abierta ante diferentes shock transitorios y permanentes. 	
+	\end{block}	
+	\begin{block} {Estructura}
+		\begin{description}
+			\item[Supuesto 1] Se trata de una economía abierta con libre comercio de bienes y servicios y activos financieros con el resto del mundo.
+			\item[Supuesto 2] Se trata de una economía pequeña. Ello significa que la tasa de interés internacional no depende de ninguna variable domestica.
+			\item[Supuesto 3] Las personas en esa economía viven por dos períodos, están dotados de un bien $Q_{1} $ para el período 1 y $Q_{2} $ para el 2. 	
+			\item[Supuesto 4] El bien es perecedero (no se puede almacenar).
+		\end{description}
+	\end{block}	
+\end{frame}
+
+\begin{frame}[label=2]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{block} {Estructura (Cont.)}
+		\begin{description}
+			\item[Supuesto 5] Adicionalmente los hogares están dotados de un stock inicial de activos con el exterior $B_{0}^{*} $, el cuál devenga un interés por $r_{0}B_{0}^{*} $ en el período 1, Por tanto los ingresos de los hogares en el período 1 son:
+			\begin{equation}
+			Q_{1}+r_{0}B_{0}^{*}\nonumber
+			\end{equation}
+			\item[Supuesto 6] Los hogares distribuyen sus ingresos en dos destinos: Consumo $ C_{1}$ y variaciones en sus activos $ B_{1}^{*}-B_{0}^{*}$
+		\end{description}
+	\end{block}	
+	
+	
+\end{frame}
+
+\begin{frame}[label=3]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	Bajo esta estructura los hogares presentan en el período 1 la siguiente restricción presupuestaria:
+	\begin{equation}
+	C_{1}+B_{1}^{*}-B_{0}^{*}=Q_{1}+r_{0}B_{0}^{*}
+	\end{equation}
+	Similarmente para el el período 2 los hogares presentan la siguiente restricción presupuestaria:
+	\begin{equation}
+	C_{2}+B_{2}^{*}-B_{1}^{*}=Q_{2}+r_{1}B_{1}^{*}
+	\end{equation}
+	Bajo las condiciones de juego no-ponzi y de transversabilidad debe cumplirse:
+		\begin{equation}
+		B_{2}^{*}=0
+		\end{equation}
+	Combinando la ecuación 1 y 2 tenemos la restricción intertemporal de la economía:
+		\begin{align}
+	C_{2}-(Q_{1}+(1+r_{0})B_{0}^{*}-C_{1})&=Q_{2}+r_{1}(Q_{1}+(1+r_{0})B_{0}^{*}-C_{1})\nonumber\\
+	C_{2}&=Q_{2}+(1+r_{1})(Q_{1}+(1+r_{0})B_{0}^{*}-C_{1})\nonumber\\
+	C_{2}+(1+r_{1})C_{1}&=Q_{2}+(1+r_{1})Q_{1}+(1+r_{0})^{2}B_{0}^{*}\nonumber\\
+	\frac{C_{2}}{(1+r_{1})}+C_{1}&=\frac{Q_{2}}{(1+r_{1})}+Q_{1}+(1+r_{0})B_{0}^{*}	
+		\end{align}
+\end{frame}
+
+
+\begin{frame}[label=4]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{center}
+	\begin{tikzpicture}[scale=0.8]
+	\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+	\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+	\draw[smooth, domain = 0:6, color=black]
+	plot (\x,{6-\x}) node[right] {$ $};
+	\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {Autarquía};
+	\draw[dotted, domain = 0:3, color=black]
+	plot (\x,{3}); 
+	\node[left] at (0,3) {$Q_{2}$};
+	\draw[dotted, domain = 0:3, color=black]
+	plot ({3},\x); 
+	\node[below] at (3,0) {$Q_{1}$};
+	\draw[->, thick, blue] (2,6)  -- (2,4);
+	\node[above] at (2,6) {$slope=-(1+r_{1})$}; 
+	\node[left]  at (0,6) {$(1+r_{1})Q_{1}+Q_{2}$};
+	\node[below] at (6,0) {$Q_{1}+\frac{Q_{2}}{(1+r_{1})}$};
+	\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=4A]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {A};
+		\draw[dotted, domain = 0:3, color=black]
+		plot (\x,{3}); 
+		\node[left] at (0,3) {$Q_{2}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({3},\x); 
+		\node[below] at (3,0) {$Q_{1}$};
+		\draw[->, thick, blue] (3.5,3.0)  -- (4,2.5);
+		\draw[fill, blue] (4,2) circle [radius=2.5pt]	node[above right] {B};
+		\draw[dashed, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[dashed, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=4B]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.7]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\node[below] at (1,3) {$Ahorro$};
+		\node[above] at (2.5,0) {$Desahorro$};
+		\draw[dashed, domain = 0:2, color=black]
+		plot ({4},\x);
+		\node[below] at (4,0) {$C_{1}$}; 
+		\draw[--, red, ultra thick] (3,0) -- (4,0);
+		\draw[dashed, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[fill, red] (4,2) circle [radius=2.5pt]	node[above right] {B};
+		\draw[--, green, ultra thick] (0,2) -- (0,3);
+		\node[below] at (3,0) {$Q_{1}$};
+		\node[left] at (0,3) {$Q_{2}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+	
+	\begin{frame}[label=5]
+		\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+		Pero: ¿De qué depende que se ahorre en el período 1?\\
+		Depende de las preferencias:\\
+		Definiendo las preferencias en función de $C_{1} $ y $ C_{2}$ como:
+			\begin{equation}
+			U(C_{1}, C_{2})
+			\end{equation}
+		Donde la función U estrictamente se incrementa en ambos argumento. Dibujando una serie de curvas de indiferencia las cuales cada una expresan diferentes combinaciones de consumo intertemporal
+		manteniendo fijo el nivel de utilidad, enfatizamos dos objetivos.
+		\begin{enumerate}
+			\item Más es mejor.
+			\item La convexidad respecto al origen implica que la TMS de $C_{2}$ es decreciente con respecto a $C_{1}$.
+		\end{enumerate}
+	\end{frame}
+
+
+\begin{frame}[label=4B]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {A};
+		\draw[dotted, domain = 0:3, color=black]
+		plot (\x,{3}); 
+		\node[left] at (0,3) {$Q_{2}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({3},\x); 
+		\node[below] at (3,0) {$Q_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {B};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[smooth, domain = 2:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[smooth, domain = 1.84:6, color=black]
+		plot (\x,{27/(\x*\x)}) node[right] {$ $};
+		\draw[smooth, domain = 2.5:6, color=black]
+		plot (\x,{50/(\x*\x)}) node[right] {$ $};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}[label=6]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+Formalmente el punto de tangencia de la curva de indiferencia con la restricción ínter-temporal se resuelve a partir del problema:
+	\begin{align}
+	\max_{C_{1}, C_{2}} U(C_{1}, C_{2})\nonumber \\
+	s.a.\nonumber \\
+	\frac{C_{2}}{(1+r_{1})}+C_{1}&=\frac{Q_{2}}{(1+r_{1})}+Q_{1} +(1+r_{0})B_{0}^{*}\nonumber \\
+	L&=U(C_{1}, C_{2})-\lambda(\frac{C_{2}}{(1+r_{1})}+C_{1}-\frac{Q_{2}}{(1+r_{1})}-Q_{1} -(1+r_{0})B_{0}^{*})\nonumber \\
+	C.P.O\nonumber \\
+	U_{1}(C_{1}, C_{2})&=\lambda \nonumber \\
+	U_{2}(C_{1}, C_{2})&=\frac{\lambda}{(1+r_{1})} \nonumber \\
+	U_{1}(C_{1}, C_{2})&=(1+r_{1})U_{2}(C_{1}, C_{2}) 
+	\end{align}
+
+\end{frame}
+
+\begin{frame}[label=7]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{block} {Estructura (cont.)}
+		\begin{description}
+			\item[Supuesto 7] Todos los hogares son idénticos; así que al estudiar el comportamiento individual de un hogar comprendemos el comportamiento de una economía como un todo.
+			\item[Supuesto 8] En esta economía no hay inversión ni capital 
+		\end{description}
+	\end{block}	
+	Dado el supuesto 1 y 2, se debe cumplir:\\
+	\begin{align}
+	r^{*}&=r_{1}
+	\end{align}
+	En equilibrio la tasa de interés domestica ($ r_{1}$) es igual a la tasa de interés externa ($	r^{*} $) lo que se conoce como interest rate parity
+\end{frame}
+
+\begin{frame}[label=8]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	En resumen en el equilibrio se debe cumplir el siguiente sistema de ecuaciones, las cuales son las que definen el modelo:
+		\begin{align}
+		\frac{C_{2}}{(1+r_{1})}+C_{1}&=\frac{Q_{2}}{(1+r_{1})}+Q_{1} +(1+r_{0})B_{0}^{*} \label{e8}\\
+		U_{1}(C_{1}, C_{2})&=(1+r_{1})U_{2}(C_{1}, C_{2}) \\
+		r^{*}&=r_{1} 
+		\end{align}
+	Note que en este modelos el set: $\{r_{0},B_{0}^{*}, Q_{1}, Q_{2}, 	r^{*}\} $ son variables exógenas ó que se determinan fuera del modelo. 
+\end{frame}
+
+\begin{frame}[label=9]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+En base a este modelo hay que definir la balanza de pagos intertemporal lo cual se logra reordenando la ecuación \ref{e8}:
+	\begin{align}
+	\frac{C_{2}}{(1+r_{1})}+C_{1}&=\frac{Q_{2}}{(1+r_{1})}+Q_{1} +(1+r_{0})B_{0}^{*}\nonumber \\
+	(1+r_{0})B_{0}^{*}&=\frac{C_{2}-Q_{2}}{(1+r_{1})}+(C_{1}-Q_{1})\nonumber \\
+	(1+r_{0})B_{0}^{*}&=-(Q_{1}-C_{1})-\frac{Q_{2}-C_{2}}{(1+r_{1})}\nonumber 
+	\end{align}
+
+Por definición sabemos que $TB_{1}=Q_{1}-C_{1} $ y que $TB_{2}=Q_{2}-C_{2} $, sustituyendo esas definiciones más la condición de equilibrio paridad de tasa de interés tenemos:
+\begin{align}
+(1+r_{0})B_{0}^{*}&=-TB_{1}-\frac{TB_{2}}{(1+r^{*})}\label{e11}
+\end{align}
+Esta ecuación nos indica que el valor presente de balanzas comerciales de una economía deben corresponderse a la posición inicial de activos externos netos\footnote{Evaluar caso en que $B_{0}^{*}<0$, $B_{0}^{*}<0$ y $B_{0}^{*}=0$}.  
+\end{frame}
+
+\begin{frame}[label=10]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+Este modelo también permite definir la Cuenta Corriente intertemporal lo que se logra re ordenando la ecuación \ref{e11}:
+	\begin{align}
+	(1+r_{0})B_{0}^{*}&=-TB_{1}-\frac{TB_{2}}{(1+r^{*})}\nonumber \\
+	(1+r_{0})B_{0}^{*}&=-(CA_{1}-r_{0} B_{0}^{*})-\frac{(CA_{2}-r^{*} B_{1}^{*})}{(1+r^{*})}\nonumber 
+	\end{align}
+Noten que por definición sabemos que $CA_{1}=TB_{1}+r_{0}B_{0}^{*} $ y que $CA_{2}=TB_{2}+r^{*}B_{1}^{*} $, también que el término $r_{0}B_{0}^{*}$ puede eliminarse y que $CA_{2}=B_{2}^{*}-B_{1}^{*} $; entonces tenemos:
+\begin{align}
+(1+r_{0})B_{0}^{*}&=-(CA_{1}-r_{0} B_{0}^{*})-\frac{(CA_{2}-r^{*} B_{1}^{*})}{(1+r^{*})}\nonumber \\
+B_{0}^{*}+r_{0}B_{0}^{*}&=-CA_{1}+r_{0}B_{0}^{*}-\frac{B_{2}^{*}-B_{1}^{*} -r^{*} B_{1}^{*}}{(1+r^{*})}\nonumber \\
+B_{0}^{*}&=-CA_{1}-\frac{-B_{1}^{*}(1+r^{*})}{(1+r^{*})}\nonumber \\
+B_{0}^{*}&=-CA_{1}-CA_{2} 
+\end{align}	
+	
+\end{frame}
+
+\begin{frame}[label=10]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Temporal vs permanentes shocks}}
+Nos interesa responder la pregunta ¿Cuál es el efecto sobre la CA ante un incremento de Q? no obstante esa pregunta no tiene una respuesta precisa debemos formular una pregunta más dinámica en la que acondicionemos un estado de la economía futura. Por que los agentes responden de acuerdo a como esperan el futuro.
+  \begin{block} {PRINCIPIO}
+  	\begin{enumerate}
+  		\item Sí el shock es permanente el ajuste es vía consumo.
+  		\item Sí el shock es transitorio el ajuste es vía ahorro.
+  	\end{enumerate}
+   \end{block}	 
+\end{frame}
+
+\begin{frame}[label=11]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	SHOCK TRANSITORIO DE INGRESO\footnote{¿Por qué la nueva restricción es paralela?}\\
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {A};
+		\draw[smooth, domain = 0:4, color=black]
+		plot (\x,{4-\x}) node[right] {$ $};
+		\draw[fill] (1,3) circle [radius=2.5pt]	node[above right] {$A^{'}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot (\x,{3}); 
+		\node[left] at (0,3) {$Q_{2}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({3},\x); 
+		\node[below] at (3,0) {$Q_{1}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({1},\x); 
+		\node[below] at (1,0) {$q_{1}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=12]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	SHOCK TRANSITORIO DE INGRESO\footnote{¿Qué clase de bienes se consume en esta economía?}\\
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {A};
+		\draw[smooth, domain = 0:4, color=black]
+		plot (\x,{4-\x}) node[right] {$ $};
+		\draw[fill] (1,3) circle [radius=2.5pt]	node[above right] {$A^{'}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot (\x,{3}); 
+		\node[left] at (0,3) {$Q_{2}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({3},\x); 
+		\node[below] at (3,0) {$Q_{1}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({1},\x); 
+		\node[below] at (1,0) {$q_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {B};
+		\draw[smooth, domain = 2:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[smooth, domain = 1.1:6, color=black]
+		plot (\x,{9.375/(\x*\x)}) node[right] {$ $};
+		\draw[fill=blue] (2.5,1.5) circle [radius=2.5pt]	node[above right] {$ B^{'}$};
+		\draw[dotted, domain = 0:1.5, color=black]
+		plot ({2.5},\x); 
+		\node[below] at (2.5,0) {$c_{1}$};
+		\draw[dotted, domain = 0:2.5, color=black]
+		plot (\x,{1.5}); 
+		\node[left] at (0,1.5) {$c_{2}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=13]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	SHOCK PERMANENTE DE INGRESO\footnote{¿Qué clase de shock es el cambio climático?}\\
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {A};
+		\draw[smooth, domain = 0:2, color=black]
+		plot (\x,{2-\x}) node[right] {$ $};
+		\draw[fill] (1,1) circle [radius=2.5pt]	node[above right] {$A^{'}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot (\x,{3}); 
+		\node[left] at (0,3) {$Q_{2}$};
+		\draw[dotted, domain = 0:1, color=black]
+		plot (\x,{1}); 
+		\node[left] at (0,1) {$q_{2}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({3},\x); 
+		\node[below] at (3,0) {$Q_{1}$};
+		\draw[dotted, domain = 0:1, color=black]
+		plot ({1},\x); 
+		\node[below] at (1,0) {$q_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {B};
+		\draw[smooth, domain = 2:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[smooth, domain = 0.5:4, color=black]
+		plot (\x,{1.186/(\x*\x)}) node[right] {$ $};
+		\draw[fill=blue] (1.33,0.66) circle [radius=2.5pt]	node[above right] {$ B^{'}$};
+		\draw[dotted, domain = 0:0.66, color=black]
+		plot ({1.33},\x); 
+		\node[below] at (1.33,0) {$c_{1}$};
+		\draw[dotted, domain = 0:1.33, color=black]
+		plot (\x,{0.66}); 
+		\node[left] at (0,0.66) {$c_{2}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=10]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Temporal vs permanentes shocks}}
+	\begin{block} {En conclusión }
+	Comparando los efectos de un shock temporal vs uno permanente sobre la cuenta corriente emerge una lección general:\\
+	Ante un shock transitorio la economía deberá financiarse endeudándose en el mercado exterior produciéndose elevados movimientos en cuanta corriente. Y ante un shock permanente la economía tenderá a ajustarse variando el consumo permanentemente sin producir elevados movimientos en la cuenta corriente.
+
+	\end{block}	 
+\end{frame}
+
+\begin{frame}[label=11]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Términos de intercambio shocks}}
+	\begin{block} {Estructura (adicional)}
+		\begin{description}
+			\item[Supuesto 9] Las dotaciones $Q_{1}$ y $ Q_{2}$ pueden ser consumidos o exportado. 
+		\end{description}
+	\end{block}	
+	Ese es un supuesto útil en el análisis de una economía abierta y pequeña.\\ No obstante para algunas economías es poco realista\footnote{La parte de bienes extranjero dentro de una canasta de consumo es baja}. \\
+	De manera formal veremos un caso extremo:
+	\begin{itemize}
+		\item Los bienes de consumo son todos importados.
+		\item Los bienes dotado por la economía son todos exportados.
+	\end{itemize}
+	Definiremos dos precios:
+	\begin{itemize}
+		\item $P^{M} $ el precio de los  bienes de consumo.
+		\item $P^{X} $ el precio de los  bienes de exportación.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[label=12]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Términos de intercambio shocks}}
+	Definimos los términos de intercambio como:\\
+	\begin{align}
+	TT=\frac{P^{X}}{P^{M}}\nonumber 
+	\end{align}
+	\begin{block} {Estructura (adicional)}
+		\begin{description}
+			\item[Supuesto 10] Los Activos Extranjeros están expresados en bienes de consumo o de exportación. 
+		\end{description}
+	\end{block}	
+	Dada esta nueva estructura la economía enfrenta la siguiente restricción presupuestaria para el período 1 y 2 respectivamente:
+	\begin{align}
+	C_{1}+B_{1}^{*}-B_{0}^{*}&=TT_{1}Q_{1}+r_{0}B_{0}^{*}\\
+	C_{2}+B_{2}^{*}-B_{1}^{*}&=TT_{2}Q_{2}+r_{1}B_{1}^{*}
+	\end{align}
+	
+\end{frame}
+\begin{frame}[label=13]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Términos de intercambio shocks}}
+Considerando la condición de transversabilidad y no juego ponnzi tenemos $B_{2}^{*}=0$; despejando $B_{1}^{*}$en 14 y combinando 13 y 14 tenemos:
+
+	\begin{align}
+	B_{1}^{*}(1+r_{1})&=C_{2}-TT_{2}Q_{2}\nonumber \\
+	C_{1}+(\frac{C_{2}}{(1+r_{1})}-\frac{TT_{2}Q_{2}}{(1+r_{1})})&=TT_{1}Q_{1}+B_{0}^{*}(1+r_{0})\nonumber \\
+	C_{1}+\frac{C_{2}}{(1+r_{1})}&=B_{0}^{*}(1+r_{0})+TT_{1}Q_{1}+\frac{TT_{2}Q_{2}}{(1+r_{1})}
+	\end{align}
+\begin{block} {En conclusión }
+	Al observar la ecuación 15 se nota que los shocks en los términos de intercambios son como los shocks en la dotación; entonces la respuesta dependerá sí esos shocks son transitorios o permanentes.
+\end{block}	 	
+\end{frame}
+
+\begin{frame}[label=14]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Shocks en la Tasa de interés internacional}}
+	Sí la tasa de interés internacional ($ r^{*}$) se incrementa; se produciría dos efectos:
+	\begin{itemize}
+		\item Efecto sustitución: Consisten en sustituir consumo presente por consumo futuro dado que el ahorro tiene mayor rendimiento en el presente éste es mas atractivo.\\
+		\begin{align}
+	\uparrow r^{*}\rightarrow \downarrow C_{1}\rightarrow\uparrow CA_{1}\nonumber \\
+		\end{align}
+		\item Efecto riqueza: Los deudores ven deteriorada su situación mientras los acreedores la ven mejorada. Si una economía es deudora el efecto riqueza refuerza el efecto sustitución. Si la economía es acreedora el efecto riqueza compensa (al menos en parte) el efecto sustitución dado que la mayor riqueza aumenta el consumo en el período uno.
+	\end{itemize}
+	Si se asume que el efecto sustitución es más fuerte que el efecto riqueza; un incremento en la tasa de interés internacional reduce el consumo presente mejorando la CA.	
+\end{frame}
+
+\begin{frame}[label=15]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Shocks en la Tasa de interés internacional}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[smooth, domain = 0:4, color=black]
+		plot (\x,{7-1.75*\x}) node[right] {$ $};
+		\draw[fill=blue] (2.67,2.33) circle [radius=2.5pt]	node[above right] {$B^{'}$};
+		\draw[dotted, domain = 0:1.333, color=black]
+		plot (\x,{4.667}); 
+		\node[left] at (0,4.667) {$Q_{2}$};
+		\draw[dotted, domain = 0:4.667, color=black]
+		plot ({1.333},\x); 
+		\node[below] at (1.333,0) {$Q_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {$B$};
+		\draw[fill] (1.333,4.667) circle [radius=2.5pt]	node[above right] {$A$};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[smooth, domain = 2:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[smooth, domain = 1.45:6, color=black]
+		plot (\x,{16.5925/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:2.33, color=black]
+		plot ({2.67},\x); 
+		\node[below] at (2.67,0) {$c_{1}$};
+		\draw[dotted, domain = 0:2.67, color=black]
+		plot (\x,{2.33}); 
+		\node[left] at (0,2.33) {$c_{2}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+\begin{frame}[label=16]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Economía con preferencias Logarítmicas}}
+	El objetivo es ver la solución del modelo de forma algebraica dada una función de utilidad como:
+	\begin{align}
+		U(C_{1}, C_{2})&=\ln C_{1}+ \ln C_{2}
+	\end{align}
+	Siendo la utilidad marginal respecto a $C_{1}$ y $C_{2}$ respectivamente:
+	\begin{align*}
+	U_{1}(C_{1}, C_{2})&=&\frac{\delta U(C_{1}, C_{2})}{C_{1}}&=&\frac{\delta (\ln C_{1}+ \ln C_{2})}{C_{1}}&=&\frac{1}{C_{1}}\\
+	U_{2}(C_{1}, C_{2})&=&\frac{\delta U(C_{1}, C_{2})}{C_{2}}&=&\frac{\delta (\ln C_{1}+ \ln C_{2})}{C_{2}}&=&\frac{1}{C_{2}}
+	\end{align*}
+	la decisión óptima de consumo viene dado por la condición 
+		\begin{align}
+			U_{1}(C_{1}, C_{2})&=(1+r_{1})U_{2}(C_{1}, C_{2})\nonumber \\
+			\frac{1}{C_{1}}&=(1+r_{1})\frac{1}{C_{2}}
+		\end{align}
+\end{frame}
+
+\begin{frame}[label=17]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Economía con preferencias Logarítmicas}}
+	Considerando la restricción presupuestaria intertemporal: 
+	\begin{align}
+	C_{1}+\frac{C_{2}}{(1+r_{1})}&=B_{0}^{*}(1+r_{1})+	Q_{1}+\frac{Q_{2}}{(1+r_{1})}
+	\end{align}
+	Definimos la el valor presente de la riqueza de la economía como\footnote{Notar que en el modelo suponemos que esto está dado} :
+	\begin{align}
+	\hat{Y}&=B_{0}^{*}(1+r_{0})+Q_{1}+\frac{Q_{2}}{(1+r_{1})}\nonumber 
+	\end{align}
+	Se puede escribir 19 como:
+	\begin{align}
+	C_{1}&=\hat{Y}-\frac{C_{2}}{(1+r_{1})}
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=18]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Economía con preferencias Logarítmicas}}
+	Combinando 18 y 20 tenemos:
+	\begin{align}
+		C_{1}&=\hat{Y}-\frac{(1+r_{1})C_{1}}{(1+r_{1})}\nonumber \\
+		C_{1}&=\hat{Y}-C_{1}\nonumber \\
+		C_{1}&=\frac{\hat{Y}}{2} 
+	\end{align}
+	Ello indica que para los hogares en esta economía su óptimo es consumir la mitad de su riqueza en el primer período.
+\end{frame}
+
+\begin{frame}[label=19]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Economía con preferencias Logarítmicas}}
+	Para el período 1 la TB y CA están dado por:\\
+	
+	\begin{align}
+		TB_{1}&=Q_{1}-C_{1} \nonumber \\
+		CA_{1}&=r_{0}B_{0}^{*}TB_{1}\nonumber 
+	\end{align}
+	
+	Usando la definiciones $ \hat{Y}$ y $r^{*}$ tenemos:\\
+	
+	\begin{align}
+	C_{1}&=\frac{1}{2}[ B_{0}^{*}(1+r_{0})+Q_{1}+\frac{Q_{2}}{(1+r_{1})}] \\
+	C_{2}&=\frac{1}{2}(1+r^{*})[ B_{0}^{*}(1+r_{0})+Q_{1}+\frac{Q_{2}}{(1+r_{1})}] \\
+		TB_{1}&=\frac{1}{2}[ Q_{1}-B_{0}^{*}(1+r_{0})-\frac{Q_{2}}{(1+r_{1})}] \\
+		CA_{1}&=r_{0}B_{0}^{*}+\frac{1}{2}[ Q_{1}-B_{0}^{*}(1+r_{0})-\frac{Q_{2}}{(1+r_{1})}]
+	\end{align}
+	
+\end{frame}
+
+
+\end{document}

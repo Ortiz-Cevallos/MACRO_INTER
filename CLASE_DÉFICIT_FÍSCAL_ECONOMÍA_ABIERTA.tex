@@ -1,0 +1,465 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+%\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+%\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize DÉFICIT GEMELOS} {}}
+	\begin{block} {Motivación}
+		Hasta ahora sólo se consideran dos agentes: hogares y firmas.\\
+		Se debe introducir el gobierno pues éste influye a través de impuestos, transferencias, consumo e inversión. El objetivo es conocer cual es el rol del gobierno en la determinación de la cuenta corriente. 
+	\end{block}	
+	\begin{block}{Hipotesis de los Déficits Gemelos}
+		Esta hipótesis consiste en que el déficit fiscal es el que conduce el déficit en cuenta corriente. A groso modo:
+		\begin{align}
+		CA&=S-I\nonumber \\
+		S&=S_{priv}+S_{pub}\nonumber \\
+		I&=I_{priv}+I_{pub}\nonumber \\
+		S_{pub}&=Ingresos_{pub}-C_{pub}
+		\end{align}
+		Entonces un aumento del déficit fiscal (reducción del ahorro público un mayor gasto público) implica un déficit en cuenta corriente.
+	\end{block} 
+\end{frame}
+
+\begin{frame}[label=2]
+	\frametitle{{\normalsize Evidencia Empírica: DÉFICIT GEMELOS} {}}
+	Considerando cuatro eventos para evaluar la hipótesis de los déficit gemelos:
+	\begin{itemize}
+		\item EEUU. principios de los 80 durante el período de Reagan. Aparentemente si se cumplió la hipótesis.
+		\item EEUU. 2007-2008 durante la expansión fiscal de Obama. Aparentemente no se cumplió la hipótesis.
+		\item EEUU. II-WW. Aparentemente si se cumplió la hipótesis en la dirección pero en magnitud pequeña.
+		\item EEUU. II-WW. Aparentemente si se cumplió la hipótesis en la dirección pero en magnitud pequeña.
+		\item EEUU. 90-2000 administración de Clinton. Aparentemente no se cumplió la hipótesis. 
+		
+		\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[label=3]
+	\frametitle{{\normalsize Evidencia Empírica: DEFICIT GEMELOS} {}}
+	El que no exista una relación sistemática entre grandes cambios en el ahorro fiscal con deterioros en la cuenta corriente no significa que la hipótesis de déficit gemelos no se cumpla. \\
+	
+	Toda economía enfrenta diferentes shock por lo que es difícil aislar los efectos de una variable ante cambios en otra. 
+	
+	Veamos un ejemplo: El incremento del déficit en cuenta corriente en Estados unidos en los primeros años de la década de los 80, era motivada por:\\☺
+	 {\bf Hipotesis 1: Mayor demanda del resto del mundo de activos de Estados Unidos:} 
+	 	\begin{itemize}
+		\item ``Safe heaven''y  Estados Unidos recibió ``capital flight'' de América Latina.
+		\item La crisis de la deuda.
+		\item Desregulación financiera en múltiples países.
+	\end{itemize}
+		
+\end{frame}
+
+\begin{frame}[label=4]
+	\frametitle{{\normalsize Evidencia Empírica: DEFICIT GEMELOS} {}}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.8]
+			\draw[-] (-5,0)  node[left] {$CA^{RW}$} -- (5,0) node[right] {$CA^{US}$}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+			\draw[smooth, domain = -3.5:3, color=black]
+			plot (\x,{3.5+\x}) node[above] {$CA^{US}(r) $};
+			\draw[smooth, domain = 0.5:-4, color=black]
+			plot (\x,{1-1.5*\x}) node[above] {$ CA^{RW'}(r)$};
+			\draw[smooth, domain = 3:-2.0, color=black]
+			plot (\x,{5-1.5*\x}) node[above] {$ CA^{RW}(r)$};
+			\draw[fill] (0.6,4.1) circle [radius=2.5pt]	node[above] {$A$};
+			\draw[dotted, domain = 4.1:0, color=black]
+			plot (0.6,{\x}) node[below] {$ CA^{US^{0}}$}; 
+			\draw[dotted, domain = 0.6:0, color=black]
+			plot ({\x},4.1) node[left] {$ r*^{0}$}; 
+			\draw[fill] (-1.0,2.5) circle [radius=2.5pt]node[above] {$B$};
+			\draw[dotted, domain = 2.5:0, color=black]
+			plot (-1.0,{\x}) node[below] {$ CA^{US^{1}}$}; 
+			\draw[dotted, domain = -1.0:0, color=black]
+			plot ({\x},2.5) node[right] {$ r*^{1}$};
+			\draw[->, blue, ultra thick] (-1,6.5)  -- (-2.5,5) ; 
+			\end{tikzpicture}
+		\end{center}
+\end{frame}
+
+\begin{frame}[label=5]
+	\frametitle{{\normalsize Evidencia Empírica: DEFICIT GEMELOS} {}}
+	El incremento del déficit en cuenta corriente en Estados unidos en los primeros años de la década de los 80, era motivada por:\\☺
+		{\bf Hipótesis 2: En EEUU los agentes desean a cualquier nivel de interés ahorrar menos que antes} 
+	
+\end{frame}
+
+
+\begin{frame}[label=6]
+	\frametitle{{\normalsize Evidencia Empírica: DEFICIT GEMELOS} {}}
+\begin{center}
+	\begin{tikzpicture}[scale=0.8]
+	\draw[-] (-5,0)  node[left] {$CA^{RW}$} -- (5,0) node[right] {$CA^{US}$}; 
+	\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+	\draw[smooth, domain = -3.5:3, color=black]
+	plot (\x,{3.5+\x}) node[above] {$CA^{US}(r) $};
+	\draw[smooth, domain = -5.5:1.0, color=black]
+	plot (\x,{7+\x}) node[above] {$CA^{US'}(r) $};
+	\draw[smooth, domain = 3:-2.0, color=black]
+	plot (\x,{5-1.5*\x}) node[above] {$ CA^{RW}(r)$};
+	\draw[fill] (0.6,4.1) circle [radius=2.5pt]	node[above] {$A$};
+	\draw[dotted, domain = 4.1:0, color=black]
+	plot (0.6,{\x}) node[below] {$ CA^{US^{0}}$}; 
+	\draw[dotted, domain = 0.6:0, color=black]
+	plot ({\x},4.1) node[left] {$ r*^{0}$}; 
+	\draw[fill] (-1.33,5.666) circle [radius=2.5pt]	node[above] {$B$};
+	\draw[dotted, domain = 5.666:0, color=black]
+	plot (-1.33,{\x}) node[below] {$ CA^{US^{1}}$}; 
+	\draw[dotted, domain = -1.33:0, color=black]
+	plot ({\x},5.66) node[right] {$ r*^{1}$};
+	\draw[->, blue, ultra thick] (-3,0.5)  -- (-4.25,2.375) ; 
+	\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}[label=7]
+	\frametitle{{\normalsize Evidencia Empírica: DEFICIT GEMELOS} {}}
+	Entre las dos hipótesis anteriores como elegir la correcta.\\
+	Una estrategia es ver entre las variables económicas involucradas cuales tiene según hipótesis diferente predicción y comparar con los datos observados.\\
+	Entonces la variable candidata es la tasa de interés real; según la hipótesis 1 ésta cae, dado que en la economía hay más ahorro; y según la hipótesis 2 ésta sube por que la demanda de ahorro aumenta.
+	La tasa de interés real observada favorece a la hipótesis 2. Lo que ocurrió es que hubo un desplazamiento de la inversión hacia la derecha y/o un desplazamiento del ahorro hacia la izquierda.
+\end{frame}
+
+
+\begin{frame}[label=8]
+	\frametitle{{\normalsize Evidencia Empírica: DEFICIT GEMELOS} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (0,0)  -- (5,0) node[right] {$S, I$}; 
+		\draw[-] (0,0)  -- (0,6)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = 0.2:4, color=black]
+		plot (\x,{1+\x}) node[above] {$S$};
+		\draw[smooth, domain = 0.5:4, color=black]
+		plot (\x,{2+\x}) node[above] {$S^{'}$};
+		\draw[smooth, domain = 0.2:4, color=black]
+		plot (\x,{5-\x}) node[above] {$I$};
+		\draw[smooth, domain = 0.2:4, color=black]
+		plot (\x,{5-\x}) node[above] {$I$};
+		\draw[smooth, domain = 0.5:5, color=black]
+		plot (\x,{6-\x}) node[above] {$I^{'}$};
+		\draw[dotted, domain = 4.8:0, color=black]
+		plot ({\x},2.7) node[left] {$ r*$}; 
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[label=9]
+	\frametitle{{\normalsize El sector gobierno en una economía abierta} {}}
+	Considerando el modelo de dos períodos, incluyendo el gobierno quien consumo bienes y servicios: $G_{1}, G_{2} $. A la vez el gobierno cobra impuestos: $T_{1}, T_{2} $. Asuma también que  el gobierno en el principio dispone de activos equivalentes a:  $B_{0}^{g} $. Así el gobierno enfrenta las siguientes restricciones en el período 1 y 2:
+	\begin{align}
+		G_{1}+(B_{1}^{g}-B_{0}^{g})=r_{0}B_{0}^{g}+T_{1}\\
+		G_{2}+(B_{2}^{g}-B_{1}^{g})=r_{1}B_{1}^{g}+T_{2}
+	\end{align}
+	Donde $ B_{1}^{g}$ y $ B_{1}^{g}$ representa el stock de activos del gobierno al final del período 1 y 2 respectivamente.\\
+	Al igual que en los hogares prevalecen los principios de transversabilidad y no-ponzi por tanto:
+	\begin{align}
+	B_{2}^{g}=0
+	\end{align}
+	Al combinar las 3 ecuaciones tenemos
+	\begin{align}
+	G_{2}-B_{1}^{g}=r_{1}B_{1}^{g}+T_{2}\nonumber\\
+	G_{2}-(1+r_{1})B_{1}^{g}=T_{2}\nonumber\\
+	G_{1}+\frac{G_{2}}{1+r_{1}}=(1+r_{0})B_{0}^{g}+T_{1}+\frac{T_{2}}{1+r_{1}}
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=10]
+	\frametitle{{\normalsize El sector gobierno en una economía abierta} {}}
+	Las restricciones presupuestarias de los hogares son modificados introduciendo el pago que ellos hacen de impuestos:
+	\begin{align}
+			C_{1}+T_{1}+(B_{1}^{p}-B_{0}^{p})=r_{0}B_{0}^{p}+Q_{1}\\
+			C_{2}+T_{2}+(B_{2}^{p}-B_{1}^{p})=r_{1}B_{1}^{p}+Q_{2}
+	\end{align}
+	Considerando los principios de transversabilidad y no-ponzi, tenemos:
+	\begin{align}
+		B_{2}^{p}=0
+	\end{align}
+	Al combinar las ecuaciones 6, 7 y 8 tenemos
+	\begin{align}
+		C_{2}+T_{2}-B_{1}^{p}=r_{1}B_{1}^{p}+Q_{2}\nonumber\\
+		C_{2}+T_{2}-(1+r_{1})B_{1}^{p}=Q_{2}\nonumber\\
+		C_{1}+T_{1}+\frac{C_{2}}{1+r_{1}}+\frac{T_{2}}{1+r_{1}}=(1+r_{0})B_{0}^{p}+Q_{1}+\frac{Q_{2}}{1+r_{1}}\nonumber\\
+		C_{1}+\frac{C_{2}}{1+r_{1}}=(1+r_{0})B_{0}^{p}+(Q_{1}-T_{1})+\frac{Q_{2}-T_{2}}{1+r_{1}}
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=11]
+	\frametitle{{\normalsize El sector gobierno en una economía abierta} {}}
+	Tras la introducción del gobierno en equilibrio sigue cumpliéndose que:
+	\begin{align}
+	r_{1}=	r^{*}
+	\end{align}
+	Además los activos totales de la economía está dado por:
+	 \begin{align}
+	B_{0}^{*}=B_{0}^{g}+B_{0}^{p}
+	 \end{align}
+	 Por simplicidad suponiendo que $ B_{0}^{*}=0 $, tenemos:
+	\begin{align}
+	 C_{1}+G_{1}+\frac{C_{2}+G_{2}}{1+r^{*}}=Q_{1}+\frac{Q_{2}}{1+r^{*}}
+	 \end{align}
+	 Por tanto la frontera de posibilidad de consumo puede ser clarificada al despejar $C_{2} $ de la ecuación anterior:
+	 \begin{align}
+	 C_{2}=(1+r^{*})(Q_{1}-C_{1}-G_{1})+Q_{2}-G_{2}
+	 \end{align}
+\end{frame}
+
+\begin{frame}[label=12]
+	\frametitle{{\normalsize El sector gobierno en una economía abierta} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\node[right] at (1,5) {$\longleftarrow C_{2}=(1+r^{*})(Q_{1}-C_{1}-G_{1})+Q_{2}-G_{2}$};
+		\draw[smooth, domain = 2.8:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=13]
+	\frametitle{{\normalsize Equivalencia Ricardiana \cite{Barro74}} {}}
+	Si definimos el ahorro privado en el período 1 como:
+	\begin{align}
+	S_{1}^{p}=Q_{1}+r_{0}B_{0}^{p}-T_{1}-C_{1}
+	\end{align}
+	Destacamos que:
+	\begin{align}
+	\Delta S_{1}^{p}=-\Delta T_{1}
+	\end{align}
+	El ahorro público (superávit fiscal secundario) está dado por:
+	\begin{align}
+	S_{1}^{g}=r_{0}B_{0}^{g}+T_{1}-G_{1}
+	\end{align}
+	El ahorro público tiene dos componentes: ingreso por intereses y el superávit fiscal primario. \\
+	
+\end{frame}
+
+
+\begin{frame}[label=13]
+	\frametitle{{\normalsize Equivalencia Ricardiana} {}}
+	Al considerar la senda de consumo del gobierno como exógena y dado el nivel de activos del gobierno, debe cumplirse que;
+	\begin{align}
+	\Delta S_{1}^{g}=\Delta T_{1}
+	\end{align} 
+	Por tanto se cumple también que:
+	\begin{align}
+	S_{1}=S_{1}^{p}+S_{1}^{g}\nonumber \\
+	\Delta S_{1}=\Delta S_{1}^{p}+\Delta S_{1}^{g}=\Delta T_{1}-\Delta T_{1}=0\nonumber 
+	\end{align} 
+	Considerando que:
+	\begin{align}
+	CA_{1}=S_{1}-I_{1}
+	\end{align} 
+	Tenemos que:
+	\begin{align}
+	\Delta CA_{1}=\Delta S_{1}-\Delta I_{1}=0
+	\end{align} 
+	
+\end{frame}
+
+
+
+\begin{frame}[label=14]
+	\frametitle{{\normalsize Gasto del gobierno y déficit en cuenta corriente} {}}
+	Es de notar que hasta ahora no se ha supuesto nada sobre el comportamiento del gasto del gobierno. \\
+	Sí en el modelo suponemos que $\Delta G_{1}>0 $ y $\Delta G_{2}=0$; ello es equivalente a un decline transitorio del producto y en respuesta a ello los hogares deben suavizar el ajuste de su consumo por tanto $\Delta C_{1}+\Delta G_{1}>0$ y $\Delta C_{2}+\Delta G_{2}<0$. Así en el período 1 la balanza comercial es:
+	\begin{align}
+	TB_{1}=Q_{1}-C_{1}-G_{1}-I_{1}\nonumber\\
+	\Delta TB_{1}=-(\Delta C_{1}+\Delta G_{1})<0\nonumber
+	\end{align} 
+	Mientras la Cuenta corriente del período 1 está dada por $CA_{1}=r_{0}B_{0}^{*}+TB_{1} $ y por lo tanto $\Delta CA_{1}=\Delta TB_{1} $ 
+\end{frame}
+
+\begin{frame}[label=15]
+	\frametitle{{\normalsize Gasto del gobierno y déficit en cuenta corriente} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\node[right] at (1,5) {$\longleftarrow C_{2}=(1+r^{*})(Q_{1}-C_{1}-G_{1})+Q_{2}-G_{2}$};
+		\draw[smooth, domain = 2.8:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt] node[above right] {A};
+		\draw[smooth, domain = 0:3, color=black]
+		plot (\x,{3-\x}) node[right] {$ $};
+		\draw[smooth, domain = 1:3, color=black]
+		plot (\x,{4.0/(\x*\x)}) node[right] {$ $};
+		\draw[fill=blue] (2,1) circle [radius=2.5pt] node[above right] {B};
+		\draw[dotted, domain = 0:1, color=black]
+		plot ({2},\x); 
+		\node[below] at (2,0) {$C_{1}^{'}$};
+		\draw[dotted, domain = 0:2, color=black]
+		plot (\x,{1}); 
+		\node[left] at (0,1) {$C_{2}^{'}$};
+		\draw[dotted, domain = 0.3:3.3, color=black]
+		plot (\x,{2.7}); 
+		\node[above] at (1.8,2.7) {$\Delta G_{1}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[label=16]
+	\frametitle{{\normalsize Fallos en el principio de Equivalencia Ricardiana} {}}
+	Hasta ahora hemos considerado dos argumentos para soportar la visión de que un déficit en cuenta corriente obedece a un menor ahorro interno. Un argumento fue cortes en los impuestos y el otro incremento en el gasto fiscal. 
+	También hemos llegado a la conclusión de que bajo el principio de Equivalencia Ricardiana, el incremento del gasto no ha sido suficiente. Por tanto debemos de incurrir en explorar por que la Equivalencia Ricardiana no lo explica todo.
+	Hay tres razones por que la Equivalencia Ricardiana no se cumple:
+	 \begin{enumerate}
+	 	\item Restricciones de liquidez o de préstamos
+	 	\item Efecto intergeneracional (la gente que se beneficia de cortes en los impuestos hoy no es la misma ni está relacionada con la que pagará los futuros incrementos)
+	 	\item Distorsiones en los impuestos
+	 \end{enumerate}
+\end{frame}
+
+\begin{frame}[label=17]
+	\frametitle{{\normalsize Fallos en el principio de Equivalencia Ricardiana: Restricciones de Liquidez} {}}
+	Suponga que los hogares disponen de una riqueza inicial igual a cero ($B_{0}^{p}=0 $) y que ellos están impedidos a acceder a un mercado financiero; por tanto su restricción en cuanto a sus activos es $B_{0}^{p} \geq 0$, suponga además que tanto las firmas como el gobierno pueden acceder a un financiamiento a la tasa $4r^{*} $, 
+\end{frame}
+
+\begin{frame}[label=18]
+	\frametitle{{\normalsize El sector gobierno en una economía abierta} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[smooth, domain = 2.2:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:4, color=black]
+		plot (\x,{2}); 
+		\node[left] at (0,2) {$C_{2}$};
+		\draw[dotted, domain = 0:2, color=black]
+		plot ({4},\x); 
+		\node[below] at (4,0) {$C_{1}$};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {A};
+		\draw[smooth, domain = 1.8:2.8, color=black]
+		plot (\x,{21/(\x*\x)}) node[right] {$ $};
+		\draw[smooth, domain = 0.9:1.2, color=black]
+		plot (\x,{5/(\x*\x)}) node[right] {$ $};
+		\draw[fill=blue] (2.4,3.6) circle [radius=2.5pt]	node[above right] {$B^{'}$};
+		\draw[dotted, domain = 0:2.4, color=black]
+		plot (\x,{3.6}); 
+		\node[left] at (0,3.6) {$C_{2}^{1}$};
+		\draw[dotted, domain = 0:8, color=black]
+		plot ({2.4},\x); 
+		\node[below] at (2.4,0) {$C_{1}^{1}$};
+		\node[above] at (2.4,8) {$L^{'}$};
+		\draw[fill=blue] (1.0,5.0) circle [radius=2.5pt]	node[above right] {$B$};
+		\draw[dotted, domain = 0:1.0, color=black]
+		plot (\x,{5.0}); 
+		\node[left] at (0,5) {$C_{2}^{0}$};
+		\draw[dotted, domain = 0:8, color=black]
+		plot ({1.0},\x); 
+		\node[below] at (1,0) {$C_{1}^{0}$};
+		\node[above] at (1,8) {$L$};
+		\node[above] at (1.7,2) {{\tiny $ \leftarrow\Delta T_{1} \rightarrow$}};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=19]
+	\frametitle{{\normalsize Fallos en el principio de Equivalencia Ricardiana: Efectos Intergeneracionales} {}}
+Ello consiste en que los hogares quienes disfruten de un recorte fiscal no son los mismo quienes sufrirán el incremento de los impuestos. \\
+Para entender esto supongamos una parte de la población que sólo vive en el período 1 y por tanto su consumo esta dado por:
+ \begin{align}
+ C_{1}=Q_{1}-T_{1}\nonumber
+ \end{align} 
+ Por lo tanto:
+  \begin{align}
+  \Delta C_{1}=-\Delta T_{1}\nonumber
+  \end{align} 
+  Mientras la otra parte de la población sólo vive en el período 2 por tanto:
+  \begin{align}
+  C_{2}=Q_{2}-T_{2}\nonumber
+  \end{align} 
+  Por lo tanto:
+  \begin{align}
+  \Delta C_{2}=-\Delta T_{2}\nonumber
+  \end{align} 
+  
+\end{frame}
+
+
+\begin{frame}[label=20]
+	\frametitle{{\normalsize Fallos en el principio de Equivalencia Ricardiana: Impuestos distorsionadores} {}}
+	Hasta hoy hemos supuestos impuestos de suma alzada, los cuales no alteran ceteris-paribus las decisiones de los agente (consumo, producción ó ahorro);  No obstante existen otra clase de impuestos que sí tiene un efecto sobre las decisiones de los agentes. \\
+	Supongamos por ejemplo un impuesto al consumo, que el gobierno define como $\tau_{1} $ y $\tau_{2} $. Entonces el costo despues de impuesto del consumo en el período 1 es $(1-\tau_{1} )C_{1}$ y $(1-\tau_{2} )C_{2}$ en el período 2. En ese caso el precio relativo entre el consumo en el período 1 respecto al período 2 está dado por:
+	 \begin{align}
+	 (1+r_{1})\frac{1-\tau_{1}}{1-\tau_{2}}
+	 \end{align}  
+	 Así un corte de $\tau_{1} $ conlleva a que el publico advierta un incremento en  $\tau_{2} $ mayor haciendo que se reduzca el precio relativo dado por 20 lo cual induce a los hogares incrementar su consumo presente en contra del consumo futuro.
+ \end{frame}
+
+
+
+
+	\begin{frame}
+		\frametitle{{\large 
+				Bibliografía}}
+		\renewcommand{\refname}{Referencias}
+		\bibliography{Biblioteca}
+		\bibliographystyle{flexbib}
+	\end{frame}
+
+
+\end{document}

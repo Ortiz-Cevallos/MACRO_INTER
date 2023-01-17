@@ -1,0 +1,282 @@
+---
+output: 
+  beamer_presentation:
+    latex_engine: xelatex
+    includes:
+      in_header:   PAQUETES.tex
+      before_body: PORTADA.sty
+  number_sections: true
+  slide_level: 3
+lang: es
+fontsize: 10
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Tabla de Contenido
+
+\tableofcontents
+
+
+
+\section[]{Motivación}
+## Motivación {.plain}
+
+La región del TNC ha experimentado, en el lustro iniciado en 2015,
+un alto dinamismo en el flujo de remesas.
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm}Evolución del flujo de remesas en términos reales.}
+\label{inicio}
+\centering 
+\includegraphics[width=9.0cm]{FIGURAS/G_PRESENTA_1}
+\end{figure}
+\tiny Fuente: Elaboración propia con base en SECMCA.
+
+## 
+
+El impacto de las remesas sobre las economías de la región ha sido objeto de numerosos estudios principalmente en dos líneas de investigación:
+	
+\begin{enumerate}
+	\item Una relación positiva con el crecimiento económico.
+A través del estímulo sobre el consumo (Ratha, Mohapatra y Scheja (2011)), o la inversión en capital humano como lo son la educación y salud (Adams (2005) y Edwards y Ureta (2003)).
+	\item Una relación negativa con el crecimiento económico. A través del desestímulo sobre la oferta de trabajo (Cáceres y Saca (2006)).
+\end{enumerate}
+Este trabajo plantea una tercera línea de investigación: **Explorar el vínculo directo entre el flujo de remesas y los activos objetos de intermediación a través del sistema financiero tradicional. Y por tanto introducir las remesas como un factor importante en materia de estabilidad financiera.**
+
+
+\section[]{Marco teórico y definición de hipótesis de investigación}
+
+## Marco teórico y definición de hipótesis de investigación.
+
+Remesas y estabilidad financiera
+
+\begin{description}
+	\item[Remesas] Una fracción de éstas pueden ser consideradas como una tecnología que el inmigrante ocupa para transferir recursos al futuro (Delpierre y Verheyden (2014)).
+	\item[Remesas como fuente de liquidez] Las remesas al llegar como depósitos pese a encontrarse disponibles para el retiro
+inmediato generalmente no se reclaman, debido al
+aislamiento geográfico del inmigrante (Grigorian y Kryshko (2017)).
+\item[Depósito a crédito] La evolución de los depósitos es el factor más importante en la determinación del ciclo del crédito (Barajas y Steiner (2002)).
+\end{description}
+
+## {.plain}
+
+Remesas y estabilidad financiera
+
+\begin{figure}[H] 
+	\centering  
+	\renewcommand{\figurename}{Figura}
+	\caption{Efecto de las remesas sobre el ciclo y riesgo de crédito.}
+	\label{hola}
+\begin{tikzpicture}[scale=0.40]
+	\draw[-] (0,0)  -- (8,0)  node[right] {{\tiny }}; 
+	\draw[-] (0,0)  -- (0,8)  node[right]  {{\scriptsize  Captacione$s_{t}$}};
+	\node[below] at (3.5,0) {{\scriptsize  Remesa$s_{t}$}};
+	\node[above] at (1,0) {{\scriptsize  $rem_{0}$}};
+	\node[above] at (8,0) {{\scriptsize  $rem_{1}$}};
+	\node[above] at (4.0,0) {\footnotesize{$ \rightarrow$}}; 
+	\node[above] at (4.0,0.5) {\footnotesize {\color{red} (1)}}; 
+	\node[above] at (10.35,3.5) {{\scriptsize  $c_{0}$}};
+	\node[above] at (10.35,7.0) {{\scriptsize  $c_{1}$}};
+	\node[above] at (10.35,5.0) {\footnotesize{$ \uparrow$}}; 
+	\node[right] at (10.5,5.5) {\footnotesize {\color{red} (2)}}; 
+	\node[above] at (12.85,-10) {{\scriptsize  $l_{0}^{t}$}};
+	\node[above] at (16.35,-10) {{\scriptsize  $l_{1}^{t}$}};
+	\node[above] at (14,-10) {\footnotesize{$ \rightarrow$}}; 
+	\node[above] at (14,-9.5) {\footnotesize {\color{red} (3)}}; 
+
+	\node[left] at (0,-6.625) {{\scriptsize  $r_{0}$}};
+	\node[left] at (0,-4.0) {{\scriptsize  $r_{1}$}};
+	\node[left] at (0,-5.25) {\footnotesize{$ \uparrow$}};
+	\node[left] at (-0.5,-5.25) {\footnotesize {\color{red} (4)}}; 
+	\node[above] at (4.8333,-10) {{\scriptsize  $l_{0}^{t+h}$}};
+	\node[above] at (1.333,-10) {{\scriptsize  $l_{1}^{t+h}$}};
+	\node[above] at (3,-10) {\footnotesize{$ \leftarrow$}}; 
+	\node[above] at (3,-9.5) {\footnotesize {\color{red} (5)}}; 
+	\draw[smooth, thick, domain = 8.5:0.25, color=black]
+	plot (\x,{3+0.5*\x}) node[right] {{\tiny }};
+	\draw[-] (10,0)  -- (18,0)  node[right] {}; 
+	\draw[-] (10,0)  -- (10,8)  node[right]  {{\scriptsize  Captacione$s_{t}$}};
+	\node[below] at (18.0,0) {{\scriptsize  Stock de crédit$o_{t}$}};
+	\draw[smooth, domain = 16.5:10.25, color=black]
+	plot (\x,{-9+\x}) node[right] {{\tiny }};
+	\draw[-] (10,-10)  -- (18,-10)  node[right] {}; 
+	\draw[-] (10,-10)  -- (10,-2)  node[left]  {{\scriptsize  Riesg$o_{t+h}$}};
+	\node[below] at (16.0,-10) {{\scriptsize Stock de Crédit$o_{t}$}};
+	\draw[smooth, domain = 18:10.5, color=black]
+	plot (\x,{-16+0.75*\x}) node[right] {{\small }};
+	\draw[-] (0,-10)  -- (8,-10)  node[right] {}; 
+	\draw[-] (0,-10)  -- (0,-2)  node[right]  {{\scriptsize Riesg$o_{t+h}$}};
+	\node[below] at (3.5,-10) {{\scriptsize  Stock de Crédit$o_{t+h}$}};
+	\draw[smooth, domain = 7.8:0.5, color=black]
+	plot (\x,{-3-0.75*\x}) node[right] {{\tiny }};
+	\draw[dashed, thick, domain = 8:16, color=red]
+	plot (\x,{7}); 
+	\draw[dashed, thick, domain = 7:-4, color=red]
+	plot (16,{\x}); 
+	\draw[dashed,  thick, domain = 1.333:16, color=red]
+	plot (\x,-4); 
+	\draw[dashed,  thick, domain = 1:12.5, color=blue]
+	plot (\x,{3.5}); 
+		\draw[dashed,  thick, domain = 3.5:-6.625, color=blue]
+	plot (12.5,{\x}); 
+		\draw[dashed,  thick, domain = 4.8333:12.5, color=blue]
+	plot (\x,-6.625);
+	\end{tikzpicture}  
+\end{figure}
+
+
+\section[]{Estrategia en la verificación de hipótesis}
+
+## Estrategia en la verificación de hipótesis
+\begin{description}
+	\item[Etapa 1] 
+\end{description}
+\vspace{-0.5cm}
+\begin{align}
+\Delta Captaciones_{t} &= \beta_{1} \Delta Remesas_{t}+\beta_{2} Control_{1,t}+\cdots\nonumber \\
+&+\beta_{n+1} Control_{n,t}+\epsilon_{t}
+\end{align}
+\begin{description}
+	\item[Etapa 2] 
+\end{description}
+\vspace{-0.5cm}
+\begin{align}
+\Delta Captaciones_{t, i} &=  \alpha_{i}+ \beta_{1} \Delta Remesas_{t, i}+\beta_{2} Control_{1,t, i}\nonumber \\
+&+\cdots+\beta_{n+1} Control_{n,t, i}+\epsilon_{t, i}
+\end{align}
+
+## {.plain}
+Un panel permite incluir variables "inobservables" que marquen diferencia entre la dinámica de los depósitos y que están relacionadas con la dinámica en las remesas. 
+
+\begin{figure}[H]
+	\caption{\hspace{0.3cm} Indicadores demográficos de los inmigrantes en EUA.}
+	\label{hola1}
+	\vspace{0.5cm}
+\begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{G_2}  
+  \caption{\tiny{Porcentaje de la población total por país de origen y estrato de edad.}}
+\end{subfigure}
+\begin{subfigure}{.45\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{G_3}  
+  \caption{\tiny{Porcentaje de la población total por país de origen y según período de ingreso a EUA.}}
+  \end{subfigure}
+\end{figure}
+
+\vspace{0.5cm}\tiny Fuente: Elaboración propia con base en  U.S. Census Bureau 2019.
+
+## {.plain}
+\begin{description}
+	\item[Etapa 3] ¿Como evitar el sesgo dado el entorno actual de transformación de los servicios financieros?
+\end{description}
+¿Cuál es ese entorno?
+\begin{description}
+	\item[Fintech] Empresas financieras que incorporan avances tecnológicos con el potencial de transformar la prestación de servicios financieros migrando hacia nuevos modelos de negocio, aplicaciones,procesos y productos (International Monetary Fund and World Bank (2018))
+	\item[Operadores tradicionales] Las remesas sigue estando dominado por Western Union y MoneyGram.
+\item[Competencia] Los operadores tradicionales implementen cambios estructurales en su modelo de negocio; y los bancos en el TNC muestren mayor disposición en colaborar tanto con los operadores tradicionales como con las fintech, aprovechando sus economías de escala y de gama.
+\end{description}
+
+## {.plain}
+\begin{description}
+	\item[Etapa 3] ¿Como evitar el sesgo dado el entorno actual de transformación de los servicios financieros?
+\end{description}
+Para superar ese sesgo en este trabajo se propone transitar a un modelo de panel con variables instrumentales.
+
+El instrumento propuesto es el índice de terror a la migración en EUA, elaborado por  Bloom y Davis (2021). Este índice parte de identificar un conjunto de palabras en las categorías: 
+\begin{description}
+	\item[Migración:] control de fronteras, Schengen, fronteras abiertas, migrantes, migración, asilo, refugiados, inmigrantes, inmigración, asimilación y trata de personas.
+	\item[Terror:] ansiedad, pánico, bomba, miedo, crimen, terror, preocupación, violento.
+\end{description}
+Se cuentan el número de artículos periodísticos en "Access World News Newsbank" que contengan al menos una palabra de ambas categorías y se dividen por el total de artículos a lo largo de cada trimestre. 
+
+## {.plain}
+
+Se puede afirmar que el índice de terror a la migración en EUA es un instrumento que cumple con las condiciones de rango (al estar correlacionado con la variable que se desea instrumentalizar) y ortogonalidad (que el instrumento no tiene relación con la variable omitida). 
+
+Esta identificación se resume con el siguiente esquema:
+\vspace{0.5cm}
+\begin{table}[H]
+			\centering
+				\scalebox{0.5}{\begin{tabular}{M{3.0cm}M{0.75cm}M{3.0cm}M{0.75cm}M{3.0cm}M{0.75cm}M{3.0cm}M{0.75cm}M{3.0cm}}
+			
+$\uparrow$ Índice de terror a la migración en EUA & $\Longrightarrow$ & $\uparrow$ Incertidumbre	
+ & $\Longrightarrow$ & $\uparrow$ Ahorro precautorio & $\Longrightarrow$ & $\uparrow$ Dinámica de las remesas 	& $\Longrightarrow$ & $\uparrow$ Dinámica de los depósitos bancarios\\
+ 
+\end{tabular}}
+\end{table}
+
+\section[]{Resultados}
+
+## Resultados
+
+En el modelo la variable dependiente, la tasa de crecimiento interanual real de los depósitos ($y$),  está en función de la tasa de crecimiento interanual real de las remesas ($rem$) y un conjunto de controles. El conjunto de controles por país es el siguiente:
+
+\begin{eqnarray}
+Controles^{Guatemala}   &=& \{pib, r^{GT}, \Delta tcr\} \nonumber \\
+Controles^{El\;Salvador} &=&  \{pib,  r^{SV} \} \nonumber \\
+Controles^{Honduras}    &=&   \{pib, r^{HN}, d2017q4 \} \nonumber 
+\end{eqnarray}
+
+Adicionalmente, los modelos incorporan dinámica al incluir el rezago temporal de la variable dependiente como un control adicional. Ello es con el objeto de capturar su inercia y el mecanismo de ajuste parcial.
+
+## {.plain}
+
+\begin{table}[H] \centering 
+  \caption{Estimación de la tasa de crecimiento de los depósitos bancarios según diferentes modelos en el contexto de panel dinámicos con efectos fijos} 
+\label{JESULUIS} 
+\vspace{-0.2cm}
+\scalebox{0.8}{
+\begin{tabular}{@{\extracolsep{5pt}}lrr} 
+\hline  
+ & \multicolumn{2}{c}{Tasa de crecimiento real de los depósitos ($\hat{y_{t}}$)} \\ 
+\cline{2-3} 
+    & Modelo EFD & Modelo EFD-VI\\ 
+\hline 
+$y_{t-1}$ & 0.718$^{***}$ (0.106) & 0.668$^{***}$ (0.052) \\ 
+  $pib_{t}$ & 1.971$^{***}$ (0.085) & 1.570$^{***}$ (0.043) \\ 
+  $rem_{t}$ & {\bf 0.098}$^{***}$ (0.007) & {\bf 0.680}$^{***}$ (0.199) \\ 
+  $r_{t}^{SV}$ & 0.399$^{***}$ (0.013) & 0.003 (0.158) \\ 
+  $r_{t}^{GT, HN}$ & 0.788$^{***}$ (0.114) & 0.840$^{***}$ (0.052) \\ 
+  $tcr^{GT}$ & 0.264$^{***}$ (0.043) & 0.282$^{***}$ (0.023) \\ 
+  $d2017q4^{HN}$ & $-$0.040$^{***}$ (0.008) & $-$0.037$^{***}$ (0.004) \\ 
+ \hline
+Observaciones    & 54 & 54 \\ 
+R$^{2}$ ajustado & 0.515 & 0.461 \\ 
+F estadístico    & 41.514$^{***}$ & 37.427$^{***}$ \\ 
+\hline 
+Test             &                     & \\ 
+\multicolumn{2}{l}{$H_{0}$: Instrumentos son exógenos}  & Pr(>$\chi^{2}$)=0.867 \\
+\multicolumn{2}{l}{$H_{0}$: No hay correlación serial de orden 2}  & Pr(>$\chi^{2}$)=0.336\\
+\hline 
+Muestra         & \multicolumn{2}{c}{Trimestre I 2015-Trimestre IV 2019} \\ \hline 
+\end{tabular} 
+}
+\end{table} 
+
+\section[]{Conclusiones}
+
+## Conclusiones
+\begin{enumerate}
+	\item Conocer el efecto de las remesas sobre los depósitos bancarios implica identificar su vínculo. Esa tarea enfrenta un problema: los sistemas bancarios y la forma de pagos transfronterizos se encuentran en plena transformación.
+	\item Ante este problema de identificación, el presente trabajo plantea una estrategia econométrica. Definir un modelo de panel dinámico con efectos fijos y variables instrumentales.
+\end{enumerate}
+
+## Conclusiones
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+	\item La dificultad de aplicar variables instrumentales depende de encontrar un instrumento válido. Este trabajo encuentra este instrumento: el índice de terror a la migración en EUA elaborado por Baker, Bloom y Davis (2021).
+	\item Con ese instrumento se identifica para los países del TNC una relación estadística entre la dinámica de las remesas y los depósitos bancarios. La estimación de su elasticidad es de 0.68, resultado que es 60 pb superior al que se obtiene cuando se omite el efecto sobre los depósitos de la actual transformación de los servicios financieros.
+\end{enumerate}
+
+##
+
+\begin{center}
+
+\Large MUCHAS GRACIAS
+\end{center}

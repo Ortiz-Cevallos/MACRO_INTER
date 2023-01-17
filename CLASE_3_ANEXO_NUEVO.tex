@@ -1,0 +1,85 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+%\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+%\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE}\\
+ {Controles de Capital}}
+	Usualmente déficit en la cuenta corriente es algo mal visto, pues se tiene la idea que la economía esta viviendo más allá de su medios. El resultado es que la economía acumula deuda externa, ello significará una carga en el futuro que reducirá el consumo y el gasto de inversión cuando el extranjero exija la deuda.\\
+	Una recomendación de política a economías con desequilibrios externos es la imposición de controles de capital. En su forma más grave, éstos consisten en la prohibición de endeudamiento desde el resto del mundo. Versiones más leves toman la forma de impuestos sobre la entrada de capitales internacionales.
+	
+\end{frame}
+\begin{frame}[label=2]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {Controles de Capital}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.7]
+		\draw[->] (0,0)  -- (8,0)  node[right] {$C_{1}$}; 
+		\draw[->] (0,0)  -- (0,8)  node[left]  {$C_{2}$};
+		\draw[smooth, domain = 0:6, color=black]
+		plot (\x,{6-\x}) node[right] {$ $};
+		\draw[dashed, domain = 2:4.5, color=black]
+		plot (\x,{9-2*\x}) node[right] {$ $};
+		\draw[fill=blue] (4,2) circle [radius=2.5pt]	node[above right] {$B$};
+		\draw[fill] (3,3) circle [radius=2.5pt]	node[above right] {$A$};
+		\draw[smooth, domain = 2:6, color=black]
+		plot (\x,{32/(\x*\x)}) node[right] {$ $};
+		\draw[smooth, domain = 1.85:6, color=black]
+		plot (\x,{27/(\x*\x)}) node[right] {$ $};
+		\draw[dotted, domain = 0:3, color=black]
+		plot (\x,{3}); 
+		\node[left] at (0,3) {$Q_{2}$};
+		\draw[dotted, domain = 0:3, color=black]
+		plot ({3},\x); 
+		\node[below] at (3,0) {$Q_{1}$};
+		\draw[->, thick, blue] (0.5,8.5)  -- (0.5,5.5);
+		\node[above] at (0.5,8.5) {{\tiny$slope=-(1+r^{*})$}}; 
+		\draw[->, thick, blue] (7.75,0.75)  -- (4.5,0.75);
+		\node[right] at (7.75,0.75) {{\tiny$slope=-(1+r_{1})$}}; 
+		\node[right] at (5,6) {{\tiny$r_{1}=\frac{U_{1}(Q_{1},Q_{2})}{U_{2}(Q_{1},Q_{2})}-1$ }};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+
+
+\end{document}

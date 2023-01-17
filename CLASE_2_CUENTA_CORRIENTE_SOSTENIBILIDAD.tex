@@ -1,0 +1,293 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+
+\begin{frame}[label=INTRODUCCION]
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC: Trayectoria del TB} {}}
+	\begin{block} {Objetivo}
+	Responder sí un déficit en TB puede perpetuarse en el tiempo.\\	
+	\end{block}	
+	\begin{block} {Estructura}
+	\begin{description}
+		\item[Supuesto 1] Una economía en dos períodos (período 1 y 2), donde $TB_{1}, \; CC_{1}, \; y \; B_{1}^{*} $ denotan la balanza comercial, cuenta corriente y la posición de activos internacionales en el período 1 respectivamente.
+		\item[Supuesto 2] La economía empieza con un $B_{0}^{*}$ dado. Ello implica que el ingreso neto por inversión el período 1 es $r*B_{0}^{*} $, donde r es la tasa de interés.
+		\item[Supuesto 3] Abstrayendo de otros componentes de la CC definimos ésta como:\\
+		\begin{equation}
+		CC_{1}=TB_{1}+r*B_{0}^{*}
+		\end{equation}
+		\item[Supuesto 4] Asumimos que no hay cambios de valor en los activos.
+	\end{description}
+	\end{block}	
+\end{frame}
+
+\begin{frame}[label=MODELO]
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC: Trayectoria del TB} {}}
+\begin{block} {Inplicaciones }
+	\begin{description}
+		\item[Implicación] Sí por definición sabemos que:
+		 \begin{equation}
+		 CC_{1}=B_{1}-B_{0}^{*}
+		 \end{equation}
+		 \item[Implicación] Combinando la ecuaciones 1 y 2 tenemos:
+		 \begin{equation}
+		 B_{1}=TB_{1}+(1+r)*B_{0}^{*}
+		 \end{equation}
+		 \item[Implicación] La relación para el período 1 también se cumple para el 2:
+		 \begin{equation}
+		 B_{2}=TB_{2}+(1+r)*B_{1}^{*}
+		 \end{equation}
+		  \item[Implicación] Combinando estas dos últimas ecuaciones tenemos:
+		  \begin{equation}
+		  (1+r)*B_{0}^{*}= \frac{B_{2}}{(1+r)}-\frac{TB_{2}}{(1+r)}-TB_{1}
+		  \end{equation}
+	\end{description}
+\end{block}		
+\end{frame}
+	
+\begin{frame}[label=MODELO2]
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC: Trayectoria del TB} {}}
+	\begin{block} {Inplicaciones (Cont.)}
+		\begin{description}
+			\item[Implicación] De acuerdo con la ecuación 5, sí $B_{2}^{*}<0$ implica que la economía tiene una deuda que debe pagar en el período 3, no obstante hemos supuesto que la economía termina en el período 2. Por tanto el modelo implica que $B_{2}^{*}\geq0 $ lo que se conoce como condición de juego no-Ponzi.
+			\item[Implicación]  Que pasa sí $B_{2}^{*}>0 $ significaría que la economía esta dejando deuda al resto del mundo para que se pague en el futuro. Pero la economía termina en el período 2 por lo que no es optimo dejar deuda al resto de mundo.  Por tanto el modelo implica que $B_{2}^{*}=0 $ lo que se conoce como condición de transversabilidad.
+			\item[Implicación]  Bajo las dos condiciones anteriores tenemos:
+			\begin{equation}
+			(1+r)*B_{0}^{*}= -TB_{1}-\frac{TB_{2}}{(1+r)}
+			\end{equation}
+		\end{description}
+	\end{block}		
+\end{frame}	
+
+\begin{frame}[label=MODELO2]
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC: Trayectoria del TB} {}}
+	\begin{block} {Conclusión}
+	\begin{enumerate}
+		\item La ecuación 6 dice que la posición inicial de activos extranjeros debe ser igual al valor presente de los futuros déficit comerciales. Si un país tiene posición deudora la suma del valor presente de sus balanza comercial en los siguientes periodos deberán ser positivas.
+		\item La respuesta a la pregunta de sí un país puede mantener por un largo tiempo déficit en la TB, es positiva, pues ello depende de la posición de activos externo iniciales. 
+		
+	\end{enumerate}	
+	\end{block}		
+\end{frame}	
+
+\begin{frame}[label=INTRODUCCION2]
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC: Trayectoria de la CC} {}}
+	\begin{block} {Objetivo}
+		Responder sí un déficit en CC puede perpetuarse en el tiempo.\\	
+	\end{block}	
+	\begin{block} {Estructura del modelo}
+		\begin{description}
+			\item[ Manteniendo lo supuestos] 
+		\end{description}
+	\end{block}	
+	\begin{block} {Implicaciones}
+		\begin{description}
+			\item[Implicación] Por definición sabemos que:
+			\begin{equation}
+			B_{2}^{*}-B_{1}^{*}= CC_{2}
+			\end{equation}
+			\item[Implicación] Combinando la anterior expresión con la ecuación 2 tenemos:
+			\begin{equation}
+			B_{0}^{*}= -CC_{1}-CC_{2}+B_{2}^{*}
+			\end{equation}
+			\item[Implicación] Por las condiciones de transversabilidad y juego no-Ponzi implica.
+			\begin{equation}
+			B_{0}^{*}= -CC_{1}-CC_{2}
+			\end{equation}
+		\end{description}
+	\end{block}	
+\end{frame}
+
+\begin{frame}[label=MODELO22]
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC: Trayectoria de la CC} {}}
+	\begin{block} {Conclusión}
+		\begin{enumerate}
+			\item La ecuación 9 dice que la posición inicial de activos extranjeros debe ser igual al valor (negativo) de la suma de los futuros resultados en cuenta corriente. Si un país tiene posición deudora la suma del valor de sus cuenta corriente en los siguientes periodos deberán ser positiva.
+			\item La respuesta a la pregunta de sí un país puede mantener por un largo tiempo déficit en la CC, es positiva, pues ello depende también de la posición de activos externo iniciales. 
+			
+		\end{enumerate}	
+	\end{block}		
+\end{frame}	
+	
+	
+	\begin{frame}[label=INTRODUCCION3]
+		\frametitle{{\normalsize Ahorro, Inversión y Cuenta Corriente} {}}
+		El objetivo es definir una series de identidades macroeconómicas con el objeto de determinar la cuenta corriente. Ello permite diferente definiciones de CC para ser incluido en Modelos de Equilibrio General.\\
+		\begin{block} {Deficit en CC como declinación de la PII}
+		\begin{equation}
+		CC_{t}=B_{t}^{*}-B_{t-1}^{*}
+		\end{equation}	
+		Esta ecuación nos dice que si hay un déficit en $CC_{t}<0$ es por que cae la PII $B_{t}-B_{t-1}^{*}<0$	
+		\end{block}		
+	\end{frame}
+	
+\begin{frame}[label=ccperspetivas1]
+\frametitle{{\normalsize Ahorro, Inversión y Cuenta Corriente} {}}
+\begin{block} {CC como reflejo de la TB}
+	\begin{equation}
+	CC_{t}=TB_{t}+r*B_{t-1}^{*}
+	\end{equation}	
+\end{block}	
+\begin{block} {CC como reflejo del ahorro e inversión}
+	\begin{equation}
+	CC_{t}=S_{t}-I_{t}
+	\end{equation}	
+	Un déficit en CC ocurre cuando la Inversión excede al ahorro.
+\end{block}	
+\begin{block} {CC como reflejo del producto y absorción}
+	\begin{equation}
+	CC_{t}=Y_{t}-A_{t}
+	\end{equation}	
+\end{block}	
+\end{frame}
+	
+\begin{frame}
+	\frametitle{{\normalsize Modelo sobre sostenibilidad de CC en horizonte infinito} {}}
+	Partiendo de la PII en el período 1.
+	\setcounter{equation}{0}
+	\begin{equation}
+	B_{1}^{*}=(1+r)B_{0}^{*}+TB_{1}
+	\label{e1}
+	\end{equation}	
+	Despejando $B_{0}^{*}$:
+	\begin{equation}
+	B_{0}^{*}=\frac{B_{1}^{*}}{(1+r)}-\frac{TB_{1}}{(1+r)}
+	\label{e2}
+	\end{equation}	
+	Llevando la expresión anterior para el período siguiente:
+	\begin{equation}
+	B_{1}^{*}=\frac{B_{2}^{*}}{(1+r)}-\frac{TB_{2}}{(1+r)}
+	\label{e3}
+	\end{equation}	
+\end{frame}	
+	
+	\begin{frame}
+		\frametitle{{\normalsize Modelo sobre sostenibilidad de CC en horizonte infinito} {}}
+		Sustituyendo en \ref{e2}:
+		\begin{equation}
+		B_{0}^{*}=\frac{B_{2}^{*}}{(1+r)^{2}}-\frac{TB_{2}}{(1+r)^{2}}-\frac{TB_{1}}{(1+r)}
+		\label{e4}
+		\end{equation}
+		Repitiendo este proceso hasta t=T, tenemos:
+		\begin{equation}
+		B_{0}^{*}=\frac{B_{T}^{*}}{(1+r)^{T}}-\frac{TB_{1}}{(1+r)}-\frac{TB_{2}}{(1+r)^{2}}\cdots-\frac{TB_{T}}{(1+r)^{T}}
+		\label{e5}
+		\end{equation}
+		Usando las condiciones de Transversabilidad y de no-Ponzi, tenemos:
+		\begin{equation}
+		\lim_{T\longrightarrow \infty} \frac{B_{T}^{*}}{(1+r)^{T}}=0
+		\label{e6}
+		\end{equation}
+		Entonces:
+		\begin{equation}
+		B_{0}^{*}=-\frac{TB_{1}}{(1+r)}-\frac{TB_{2}}{(1+r)^{2}}\cdots-\frac{TB_{T}}{(1+r)^{T}}
+		\label{e7}
+		\end{equation}
+	\end{frame}	
+	
+		\begin{frame}
+			\frametitle{{\normalsize Modelo sobre sostenibilidad de CC en horizonte infinito} {}}
+			Ejemplo:\\
+			Suponga que la PII inicial de una economía es negativa y que en cada período siguiente se tiene un  superávit de TB suficiente para pagar una fracción constante ($\alpha \in [0,1]$ ) de los intereses sobre la deuda inicial:
+			\setcounter{equation}{0}
+			 \begin{equation}
+			 TB_{t}=-\alpha*r*B_{t-1}^{*}
+			 \label{e21}
+			 \end{equation}	
+			Sí sabemos que la deuda en período corriente está dado por:
+			 \begin{equation}
+			 B_{t}^{*}=(1+r)*B_{t-1}^{*}-TB_{t}
+			 \label{e22}
+			 \end{equation}	
+			 Sustituyendo $TB_{t}$ dado por \ref{e21} en \ref{e22} tenemos:
+			 \begin{equation}
+			 B_{t}^{*}=(1+r-\alpha*r)*B_{t-1}^{*}
+			 \label{e23}
+			 \end{equation}	
+			 Dado que $B_{0}^{*}<0$ y que $(1+r-\alpha*r)>0 $ implica que en este ejemplo se tendría una deuda negativa para siempre. 
+		\end{frame}	
+		
+		\begin{frame}
+			\frametitle{{\normalsize Modelo sobre sostenibilidad de CC en horizonte infinito} {}}
+			Además la economía mantendría una cuenta corriente negativa para siempre:
+			\begin{equation}
+			CC_{t}=r(1-\alpha)*B_{t-1}^{*}<0
+			\label{e24}
+			\end{equation}	
+			Dada la ley de movimiento de la Deuda de una economía dada por:
+			\begin{equation}
+			B_{t}^{*}=(1+r-\alpha*r)^{t}*B_{0}^{*}
+			\label{e25}
+			\end{equation}	
+			Las condiciones de no-Ponzi y transversabilidad implican:
+			\begin{equation}
+			\frac{B_{t}^{*}}{(1+r)^{t}}=\frac{(1+r-\alpha*r)^{t}}{(1+r)^{t}}*B_{0}^{*}
+			\label{e26}
+			\end{equation}	
+			La cuál converge a cero cuando $t\longrightarrow\infty$ por que: $ 1+r>1+r(1-\alpha)$.\\
+			
+			Note que la política de TB nos dice que:
+			\begin{equation}
+			TB_{t}=-\alpha*r*[1+r(1-\alpha)]^{t}*B_{0}^{*}
+			\label{e27}
+			\end{equation}	
+			
+		\end{frame}	
+		
+		
+		\begin{frame}
+			\frametitle{{\normalsize Modelo sobre sostenibilidad de CC en horizonte infinito} {}}
+			La ecuación \ref{e27} nos dice que el $TB>0$ siempre. Y que está crece a una tasa igual $r(1-\alpha)$ por lo que el crecimiento de la economía tiene que ser a una tasa mayor para que la deuda se pague en el largo plazo.
+			\begin{align}
+			TB_{1}&=-\alpha*r*[1+r(1-\alpha)]*B_{0}^{*} \nonumber\\
+			TB_{2}&=-\alpha*r*[1+r(1-\alpha)]^{2}*B_{0}^{*} \nonumber\\
+			\frac{TB_{2}-TB_{1}}{TB_{1}}&=r(1-\alpha)\nonumber\\
+			B_{1}^{*}&=(1+r(1-\alpha))*B_{0}^{*}\nonumber\\
+			B_{2}^{*}&=(1+r(1-\alpha))^{2}*B_{0}^{*}\nonumber\\
+			\frac{B_{2}^{*}-B_{1}^{*}}{B_{1}^{*}}&=r(1-\alpha)\nonumber\\
+			\frac{CC_{2}-CC_{1}}{CC_{1}}&=r(1-\alpha)\nonumber
+			\end{align}	
+			
+			
+		\end{frame}	
+\end{document}

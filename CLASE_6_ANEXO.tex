@@ -1,0 +1,333 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+%\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+%\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	\begin{block} {Objetivo}
+	Conocer que sucede cuando una economía grande afecta su PAEN, implicando que la oferta de activos mundial cambie y por tanto se afecte sustantivamente la tasa de interés. 	
+	\end{block}	
+	\begin{block} {Intuición}
+		Como cada país es grande cada uno tiene cierto poder de mercado en la economía mundial así que cada país tiene incentivos para comportarse de manera monopolísitica y acercar la tasa de interés mundial a cierto nivel que le indiferente a su PAEN deseado
+	\end{block}	
+\end{frame}
+
+\begin{frame}[plain]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	\begin{block} {Estructura}
+		\begin{description}
+			\item[Supuesto 1] Considere dos economías grandes (US, C) en dos períodos, cada país tiene una función de utilidad separable con argumentos Consumo:
+			\begin{equation}
+			U(C_{1}, C_{2})= \ln{C_{1}}+ \ln{C_{2}}
+			\end{equation}
+			\item[Supuesto 2] Las dotaciones en la economía US es constante entre períodos:
+			\begin{equation}
+			Q_{1}^{US}=	Q_{2}^{US}=Q 
+			\end{equation}
+			\item[Supuesto 3] En contraste la dotación de la economía C experimenta un crecimiento
+			\begin{align}
+			Q_{1}^{C}&=\frac{Q}{2}\;\; ; \;\; Q_{2}^{C}=Q
+			\end{align}
+			\item[Supuesto 4] Asumimos que la PAEN en ambas economías es cero al comienzo del período 1.
+			\item[Supuesto 5] Asumimos que el PAEN al final del período 2 es cero.
+			\item[Supuesto 6] La tasa de interés para pasar activos del período 1 al 2 es exógeno.
+		\end{description}
+	\end{block}	
+\end{frame}
+
+\begin{frame}[label=3]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Bajo esta estructura los hogares de la economía uno tiene el problema de maximizar su función de utilidad dado la restricción presupuestaria en el período 1 y 2 respectivamente:
+	\begin{align}
+	C_{1}^{US}+B_{1}^{US}&=Q_{1}^{US}\\
+	C_{2}^{US}&=Q_{2}^{US}+(1+r_{1})B_{1}^{US}
+	\end{align}
+	El valor presente (período 1) de la restricción presupuestaria dada por 6 sustituyendo $ B_{1}^{US} $ según 5:
+	\begin{align}
+	C_{2}^{US}+(1+r_{1})(C_{1}^{US})&=Q_{2}^{US}+(1+r_{1})(Q_{1}^{US})\nonumber \\
+	\frac{C_{2}^{US}}{(1+r_{1})}+C_{1}^{US}&\frac{Q_{2}^{US}}{(1+r_{1})}+Q_{1}^{US}
+	\end{align}
+	Si despejamos $C_{1}^{US}$ y reemplazamos en la función de utilidad tenemos:
+	\begin{align}
+	\ln{\{\frac{=Q_{2}^{US}}{(1+r_{1})}+Q_{1}^{US}-\frac{C_{2}^{US}}{(1+r_{1})}\}} + \ln{C_{2}^{US}}\label{e1}
+	\end{align}
+	
+\end{frame}
+\begin{frame}[label=4]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	La CPO de \ref{e1} es:
+	\begin{align}
+	\max_{C_{2}^{US}}\ln{\{\frac{Q_{2}^{US}}{(1+r_{1})}+Q_{1}^{US}-\frac{C_{2}^{US}}{(1+r_{1})}\}} + \ln{C_{2}^{US}}\nonumber \\
+	 \frac{1}{C_{1}^{US}}\frac{1}{1+r_{1}}(-1)+\frac{1}{C_{2}^{US}}&=0\nonumber \\
+	 C_{1}^{US}&=\frac{C_{2}^{US}}{\(1+r_{1}\)}
+	\end{align}
+	Sustituyendo C-{1} de 6 tenemos:
+	\begin{align}
+	C_{1}^{US}+C_{1}^{US}&=\frac{Q_{2}^{US}}{(1+r_{1})}+Q_{1}^{US}\nonumber \\
+	C_{1}^{US}&=\frac{Q_{2}^{US}}{2(1+r_{1})}+\frac{Q_{1}^{US}}{2}\nonumber \\
+	C_{1}^{US}&=\frac{Q}{2(1+r_{1})}+\frac{Q}{2}\nonumber 
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=5]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Ello significa que en equilibrio debe cumplirse que:
+	\begin{align}
+	CA_{1}^{US}&=B_{1}^{US}-B_{0}^{US}\nonumber \\
+	CA_{1}^{US}&=B_{1}^{US}\nonumber \\
+	CA_{1}^{US}&=Q-C_{1}^{US}\nonumber \\
+	CA_{1}^{US}&=Q-\frac{1}{2}\{\frac{Q}{(1+r_{1})}+Q\}\nonumber \\
+	CA_{1}^{US}&=\frac{Q}{2}-\frac{Q}{2(1+r_{1})}\nonumber \\
+	CA_{1}^{US}&=\frac{1}{2}Q(1-\frac{1}{(1+r_{1})})\nonumber \\
+	CA_{1}^{US}(r)&=\frac{1}{2}Q(\frac{r_{1}}{(1+r_{1})})
+	\end{align}
+
+Ahora buscamos determinar en el período 1 la CA del país C, ésta es función de la tasa de interés del país C: $CA_{1}^{C}(r_{1}^{C}) $
+\end{frame}
+
+\begin{frame}[label=5]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+Ahora buscamos determinar en el período 1 la CA del país C, ésta es función de la tasa de interés del país C: $CA_{1}^{C}(r_{1}^{C}) $, para ello resolvemos el siguiente problema:
+\begin{align}
+\max_{C_{1}^{C}, C_{2}^{C}}\ln{C_{1}^{C}} + \ln{C_{2}^{C}}\nonumber \\
+S.a \nonumber \\
+C_{1}^{C}+B_{1}^{C}&=\frac{Q}{2}\nonumber \\
+C_{1}^{C}&=Q+(1+r_{1}^{C})B_{1}^{C}\nonumber 
+\end{align}
+De lo que resulta:
+\begin{align}
+C_{1}^{C}&=\frac{1}{2}\{\frac{Q}{2}+\frac{Q}{1+r_{1}^{C}}\}
+\end{align}
+
+\end{frame}
+
+\begin{frame}[label=6]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Ello significa que en equilibrio debe cumplirse que:
+	\begin{align}
+	CA_{1}^{C}&=B_{1}^{C}-B_{0}^{C}\nonumber \\
+	CA_{1}^{C}&=B_{1}^{C}\nonumber \\
+	CA_{1}^{C}&=\frac{Q}{2}-C_{1}^{C}\nonumber \\
+	CA_{1}^{C}&=\frac{Q}{2}-\frac{1}{2}\{\frac{Q}{2}+\frac{Q}{1+r_{1}^{C}}\}\nonumber \\
+	CA_{1}^{C}&=\frac{Q}{4}-\frac{Q}{2(1+r_{1}^{C})}
+	\end{align}
+	Noten que para el caso del país C para que éste tenga un superávit en CA en el período 1 la tasa de interés tendría que ser mayor al 100\%. \\
+	Una conclusión es que aquella economía grande con perspectiva de crecimiento en su producto exhibirá un déficit en contra de un superávit en CA de aquella economía grande que no exhibe crecimiento.
+	
+\end{frame}
+
+
+\begin{frame}[label=7]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Ello significa que en equilibrio debe cumplirse que:
+	\begin{align}
+	CA_{1}^{C}&=B_{1}^{C}-B_{0}^{C}\nonumber \\
+	CA_{1}^{C}&=B_{1}^{C}\nonumber \\
+	CA_{1}^{C}&=\frac{Q}{2}-C_{1}^{C}\nonumber \\
+	CA_{1}^{C}&=\frac{Q}{2}-\frac{1}{2}\{\frac{Q}{2}+\frac{Q}{1+r_{1}^{C}}\}\nonumber \\
+	CA_{1}^{C}&=\frac{Q}{4}-\frac{Q}{2(1+r_{1}^{C})}
+	\end{align}
+	Noten que para el caso del país C para que éste tenga un superávit en CA en el período 1 la tasa de interés tendría que ser mayor al 100\%. \\
+	Una conclusión es que aquella economía grande con perspectiva de crecimiento en su producto exhibirá un déficit en contra de un superávit en CA de aquella economía grande que no exhibe crecimiento.
+	
+\end{frame}
+
+\begin{frame}[label=8]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	En equilibrio debe cumplirse que:
+	\begin{align}
+	CA_{1}^{US}+CA_{1}^{C}&=0\\
+	C_{1}^{US}+C_{1}^{C}&=\frac{3Q}{2} \\
+	C_{2}^{US}+C_{2}^{C}&=2Q 
+	\end{align}
+
+\end{frame}
+
+\begin{frame}[label=9]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Sin controles de capitales debe cumplirse que:
+	\begin{align}
+	r_{1}&=r_{1}^{C}
+	\end{align}
+	Bajo esta condición debe cumplirse que:
+	\begin{align}
+	CA_{1}^{US}(r)+CA_{1}^{C}(r)&=0\nonumber \\
+	\frac{1}{2}Q(\frac{r_{1}}{(1+r_{1})})+\frac{Q}{4}-\frac{Q}{2(1+r_{1}^{C})}				&=0\nonumber \\
+	\frac{1}{2}Q(\frac{r_{1}}{(1+r_{1})})+\frac{Q}{4}-\frac{Q}{2(1+r_{1})}					&=0\nonumber \\
+	\frac{r_{1}}{(1+r_{1})}-\frac{1}{(1+r_{1})}												&=-\frac{1}{2}\nonumber \\
+	\frac{r_{1}-1}{(1+r_{1})}	&=-\frac{1}{2}\nonumber \\
+	2-2r_{1}					&=1+r_{1}\nonumber \\
+	3r_{1}					&=1\nonumber \\
+	r_{1}					&=\frac{1}{3}\nonumber 
+\end{align}
+\end{frame}
+
+\begin{frame}[label=10]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Sí sustituimos la tasa de interés de equilibrio en las expresiones sobre el consumo y CA en USA y C durante el período 1 tenemos:
+	\begin{align}
+	C_{1}^{USA}&= \frac{1}{2}(Q+\frac{Q}{1+\frac{1}{3}})=\frac{7}{8}Q\\
+	CA_{1}^{USA}&= \frac{1}{8}Q\\
+	CA_{1}^{C}&= -\frac{1}{8}Q\\
+	C_{1}^{C}&= \frac{5}{8}Q
+	\end{align}
+	Para el período 2 tenemos el consumo en USA y C como:
+	\begin{align}
+	C_{2}^{USA}&= Q+(1+\frac{1}{3})\frac{1}{8}Q=\frac{7}{6}Q\\
+	C_{2}^{C}&= Q-(1+\frac{1}{3})\frac{1}{8}Q=\frac{5}{6}Q
+	\end{align}
+\end{frame}
+
+
+\begin{frame}[label=11]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	El bienestar puede ser medido bajo libre movilidad de capitales evaluando la función de valor de la utilidad en C y USA respectivamente :
+	\begin{align}
+		U(C_{1}^{C}, C_{2}^{C})= \ln{C_{1}^{C}}+ \ln{C_{2}^{C}}&=\ln{\frac{5}{8}Q}+ \ln{\frac{5}{6}Q}\nonumber \\
+		\ln{C_{1}^{C}}+ \ln{C_{2}^{C}}&=\ln{\frac{25}{48}}+2\ln{Q}\\
+		\ln{C_{1}^{USA}}+ \ln{C_{2}^{USA}}&=\ln{\frac{49}{48}}+2\ln{Q}
+	\end{align}
+	
+\end{frame}
+\begin{frame}[label=12]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Supongamos que C pone controles de capital de manera de mover la tasa de interés de equilibrio de manera de maximizar su bienestar. Específicamente suponemos que el gobierno en C sabe que:
+	\begin{align}
+	B_{1}^{C}+B_{1}^{USA}&=0 
+	\end{align}
+	Y que la demanda de activos externos de USA es:
+	\begin{align}
+	B_{1}^{USA}(r_{1})&= \frac{1}{2}Q\frac{r_{1}}{1+r_{1}}
+	\end{align}
+	Combinando la dos anteriores ecuaciones tenemos que:
+	\begin{align}
+	B_{1}^{C}+\frac{1}{2}Q\frac{r_{1}}{1+r_{1}}&=0 \nonumber \\
+	B_{1}^{C}&=-\frac{1}{2}Q\frac{r_{1}}{1+r_{1}} 
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=13]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Conociendo el stock de activos externos el gobierno C conoce cuales son los consumos en ambos períodos:
+	\begin{align}
+	C_{1}^{C}&=\frac{1}{2}Q-B_{1}^{C}\nonumber \\
+	C_{1}^{C}&=\frac{1}{2}Q+\frac{1}{2}Q\frac{r_{1}}{1+r_{1}}\nonumber \\
+	C_{1}^{C}(r_{1})&=\frac{1}{2}Q(\frac{1+2r_{1}}{1+r_{1}})\\
+	C_{2}^{C}&=Q+(1+r_{1})B_{1}^{C}\nonumber \\
+	C_{2}^{C}&=Q-(1+r_{1})(\frac{1}{2}Q\frac{r_{1}}{1+r_{1}})\nonumber \\
+	C_{2}^{C}(r_{1})&=\frac{1}{2}Q(2-r_{1})
+	\end{align}
+	
+\end{frame}
+
+\begin{frame}[label=14]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Conociendo ambos consumos en función de $r_{1}$ el gobierno en C puede solucionar el siguiente problema:
+	\begin{align}
+	\max_{r_{1}}U(C_{1}^{C}(r_{1}), C_{2}^{C}(r_{1}))&= \ln{C_{1}^{C}(r_{1})}+ \ln{C_{2}^{C}(r_{1})}	\nonumber \\
+	&=\ln{\frac{1}{2}Q(\frac{1+2r_{1}}{1+r_{1}})}+\ln{\frac{1}{2}Q(2-r_{1})} \nonumber \\
+	&=\ln{\frac{1}{4}Q^{2}}+\ln{2-r_{1}}+\ln{1+2r_{1}}-\ln{1+r_{1}}  \nonumber 
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=15]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	La CPO implica que:
+	\begin{align}
+	\frac{2}{1+2r_{1}}-\frac{1}{2-r_{1}}-\frac{1}{1+r_{1}}&=0\nonumber \\
+	\frac{2(1+r_{1})}{1+2r_{1}}-\frac{1(1+r_{1})}{2-r_{1}}&=1\nonumber \\
+	\frac{2+2r_{1}}{1+2r_{1}}-\frac{1+r_{1}}{2-r_{1}}&=1\nonumber \\
+	\frac{(2+2r_{1})(2-r_{1})}{(1+2r_{1})(2-r_{1})}-\frac{(1+r_{1})(1+2r_{1})}{(1+2r_{1})(2-r_{1})}&=1\nonumber \\
+	\frac{(4+2r_{1}-2r_{1}^{2})}{2+3r_{1}-2r_{1}^{2}}-\frac{(1+3r_{1}+2r_{1}^{2})}{2+3r_{1}-2r_{1}^{2}}&=1\nonumber \\
+	(4+2r_{1}-2r_{1}^{2})-(1+3r_{1}+2r_{1}^{2})&=2+3r_{1}-2r_{1}^{2}\nonumber \\
+	3-r_{1}-4r_{1}^{2}&=2+3r_{1}-2r_{1}^{2}\nonumber \\
+	r_{1}^{2}+2r_{1}-\frac{1}{2}&=0\nonumber \\
+	r_{1}&=-1 +\sqrt{\frac{3}{2}}=0.22
+	\end{align}
+\end{frame}
+
+\begin{frame}[label=15]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Noten que:
+		\begin{align}
+		r_{1}^{free}=0.33>r_{1}^{cc}=0.22
+		\end{align}
+
+Esto hace que la CA de usa se deteriore (reduzca su superávit) y que la CA de C mejore (reduzca su déficit). Ello implica que el consumo en el período 1 de C es menor en el caso de controles de capital que en el libre movilidad de capitales. \\
+
+\end{frame}
+
+\begin{frame}[label=16]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Pero ¿qué herramienta de política utiliza C para reducir su consumo en el período 1? \\
+	Lo que busca el país C es que su consumo en el período 1 caiga; para ello  debe de incrementar la tasa de interés a $r_{c*}$ de esta manera:
+	\begin{align}
+	1+r_{1}^{c*}&=\frac{C_{2}^{C}}{C_{1}^{C}}\nonumber\\
+	1+r_{1}^{c*}&=\frac{\frac{1}{2}Q(2-r_{1}^{cc})}{\frac{1}{2}Q(\frac{1+2r_{1}^{cc}}{1+r_{1}^{cc}})}\nonumber\\
+	1+r_{1}^{c*}&=\frac{2-r_{1}^{c*}}{\frac{1+2r_{1}^{cc}}{1+r_{1}^{cc}}}\nonumber\\
+	1+r_{1}^{c*}&=\frac{(2-r_{1}^{c*})(1+r_{1}^{cc})}{1+2r_{1}^{cc}}\nonumber\\
+	1+r_{1}^{c*}&=\frac{(2+r_{1}^{cc}-r_{1}^{c*}^{2})}{1+2r_{1}^{cc}}\nonumber\\
+	1+r_{1}^{c*}&=\frac{3}{2}
+	\end{align}
+\end{frame}
+
+
+\begin{frame}[label=17]
+	\frametitle{{\normalsize CONTROLES DE CAPITAL ÓPTIMOS EN UN MODELO DE DOS PAÍSES} {}}
+	Noten que:
+	\begin{align}
+	r_{1}^{c*}=0.50>r_{1}^{free}=0.33>r_{1}^{cc}=0.22
+	\end{align}
+	Si se mide el bienestar de C se tiene que con controles de capital éste es mayor.\\
+	Si definimos $\lambda $ como el incremento porcentual en el consumo de los dos períodos en el estado de control de capital referente al de libre movilidad de C tenemos:
+	\begin{align}
+	\lambda&=\sqrt{\frac{\frac{Q^{2}}{4}(7-2\sqrt{6})}{\frac{25Q^{2}}{48}}} -1\nonumber\\
+	&=0.0042\nonumber
+	\end{align}
+	
+	\end{frame}
+
+
+
+
+\end{document}

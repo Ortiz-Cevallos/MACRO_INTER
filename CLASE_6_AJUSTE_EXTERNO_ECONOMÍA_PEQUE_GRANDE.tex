@@ -1,0 +1,473 @@
+\documentclass[10pt, xcolor=table, x11names]{beamer}
+\usepackage[spanish]{babel} %CORTE DE PALABRAS RESPETANDO EL IDIOMA ESPAÑOL.
+\usepackage[Utf8]{inputenc} %acentos desde el teclado
+\usepackage	{textpos}
+\usefonttheme{professionalfonts} % fuentes de LaTeX
+\usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, ...
+\usecolortheme[RGB={130,130,190}]{structure} % or try albatross, beaver, crane, ...
+\useinnertheme{rounded}
+%\useoutertheme{shadow}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent} % Velos
+\setbeamertemplate{caption}[numbered]
+%\usepackage[spanish, authoryear, roud, datebegin]{flexbib} %CITAS BIBLIOGRÁFICAS
+\newtheorem{Teorema}{Teorema}
+\usepackage{ragged2e}
+\justifying
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[x11names,table]{xcolor}
+%\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf} % Convertir .eps a .pdf (si fuera necesario)
+\DeclareGraphicsExtensions{.pdf,.png,.jpg, .eps} % busca en este orden!
+\author[Luis Ortiz Cevallos e-mail: \href{leortiz@uc.cl}{\textit{leortiz@uc.cl}}]{Profesor: Luis Ortiz Cevallos, e-mail:\href{leortiz@uc.cl}{\textit{leortiz@uc.cl}} }
+\title[MACRO INTERNACIONAL]{\vspace*{1.0em} MACROECONOMÍA INTERNACIONAL}
+\date[\href{https://ortiz-cevallos.github.io/luisortiz.github.io/ }{\textit{https://ortiz-cevallos.github.io/luisortiz.github.io/}}]{}
+%\usepackage[pdftex]{hyperref}
+\usepackage{tikz}
+%\usepackage{pstricks}
+\hypersetup{colorlinks,%
+	citecolor=blue,%
+	filecolor=blue,%
+	linkcolor=blue,%
+	urlcolor=blue,%
+	pdftex}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}[label=11]
+	\frametitle{{\normalsize AJUSTE EXTERNO } {}}
+	\begin{block} {Motivación}
+		Presentar una herramienta gráfica que ayude a entender los ajustes externos de una economía.	
+	\end{block}	
+	La figura 1 resumen el comportamiento del ahorro e inversión y por tanto determina la CA. Sus componentes son:
+	\begin{enumerate}
+		\item La inversión como una relación negativa de la tasa de interés, dado el costo del capital que asumen las firmas ante el problema de maximizar beneficios.
+		\item El ahorro el cual depende de manera positiva tanto de la tasa de interés (a través de los canales: sustitución, ingreso y beneficios futuros) como del producto (efecto transitorio).
+		\item la CA queda por tanto determinada como un función positiva de la tasa de interés y el producto
+	\end{enumerate} 
+\end{frame}
+
+\begin{frame}[label=1]
+	\frametitle{{\normalsize TEORÍA SOBRE DETERMINACIÓN DE LA CUENTA CORRIENTE} {}}
+	\begin{figure}[H]
+		\renewcommand{\figurename}{Figura}
+		\caption{\sc Ahorro, Inversión y Cuenta Corriente}
+		\begin{minipage}[t]{0.48\textwidth}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.5]
+			\draw[-] (0,0)  -- (8,0)  node[right] {$S,I$}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+			\draw[smooth, domain = 0.25:6.5, color=black]
+			plot (\x,{7-\x}) node[right] {$I(r_{1}) $};
+			\draw[smooth, domain = 0.25:6, color=black]
+			plot (\x,{0+\x}) node[right] {$S(r_{1},Q) $};
+			\draw[dotted, domain = 0:8, color=black]
+			plot (\x,{3.5}); 
+			\node[left] at (0,3.5) {$r^{c}$};
+			\draw[dotted, domain = 0:8, color=black]
+			plot (\x,{5}); 
+			\node[left] at (0,5) {$r^{a}$};
+			\draw[dotted, domain = 0:8, color=black]
+			plot (\x,{1}); 
+			\node[left] at (0,1) {$r^{b}$};
+			\end{tikzpicture}
+		\end{center}		
+		\end{minipage} \hfill \begin{minipage}[t]{0.48\textwidth}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.5]
+			\draw[-] (-4,0)  -- (4,0)  node[right] {$CA$}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+			\draw[smooth, domain = -3:3, color=black]
+			plot (\x,{3.5+\x}) node[right] {$CA(r_{1}) $};
+			\draw[dotted, domain = 0:-4, color=black]
+			plot (\x,{3.5}); 
+			\node[left] at (0,3.5) {$r^{c}$};
+			\draw[dotted, domain = -4:1.5, color=black]
+			plot (\x,{5}); 
+			\node[left] at (0,5) {$r^{a}$};
+			\draw[dotted, domain = 0:5, color=black]
+			plot (1.5,{\x}); 
+			\draw[dotted, domain = -4:-2.5, color=black]
+			plot (\x,{1}); 
+			\node[left] at (0,1) {$r^{b}$};
+			\draw[dotted, domain = 1:0, color=black]
+			plot (-2.5,{\x}); 
+			
+			\end{tikzpicture}
+		\end{center}
+	\end{minipage}
+	\label{IV_G3}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=12]
+	\frametitle{{\normalsize AJUSTE EXTERNO ECONOMÍA PEQUEÑA} {}}
+	En una economía pequeña y abierta debe cumplirse que:
+	\begin{align}
+	r_{1}&=r^{*}
+	\end{align}
+	Lo que implica que la CA en la herramienta gráfica dado por el plano r.CA debe de ser aquella en que se la CA(r,Q) se intercepta con la horizontal $r^{*}$ dado Q.
+	 
+\end{frame}
+
+\begin{frame}[label=2]
+	\frametitle{{\normalsize AJUSTE EXTERNO ECONOMÍA PEQUEÑA} {}}
+	\begin{figure}[H]
+		\renewcommand{\figurename}{Figura}
+		\caption{\sc Condición de ajuste externo economía pequeña}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-4,0)  -- (4,0)  node[right] {$CA$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3:3, color=black]
+		plot (\x,{3.5+\x}) node[right] {$CA(r_{1}) $};
+		\draw[smooth, domain = -4:4, color=blue]
+		plot (\x,{2}) node[right] {$r^{*} $};
+		\draw[dotted, domain = 2:0, color=black]
+		plot (-1.5,{\x}); 
+		\node[below] at (-1.5,0) {$CA(r^{*})$};
+		\draw[fill] (-1.5,2) circle [radius=1.5pt];
+	\end{tikzpicture}
+	\end{center}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}[label=3]
+	\frametitle{{\normalsize AJUSTE EXTERNO SHOCK EN TASA DE INTERÉS } {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-4,0)  -- (4,0)  node[right] {$CA$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3:3, color=black]
+		plot (\x,{3.5+\x}) node[right] {$CA(r_{1},Q_{1}) $};
+		\draw[dotted, domain = -4:4, color=black]
+		plot (\x,{3}) node[right] {$r^{*1} $};
+		\draw[dotted, domain = -4:4, color=black]
+		plot (\x,{1}) node[right] {$r^{*0} $};
+		\draw[dotted, domain = 1:0, color=black]
+		plot (-2.5,{\x}); 
+		\node[below] at (-2.5,0) {$CA^{0}$};
+		\draw[dotted, domain = 3:0, color=black]
+		plot (-0.5,{\x}); 
+		\node[below] at (-0.5,0) {$CA^{1}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}[label=4]
+	\frametitle{{\normalsize AJUSTE EXTERNO SHOCK DEL PRODUCTO TRANSITORIO} {}}
+	\begin{figure}[H]
+		\renewcommand{\figurename}{Figura}
+		\caption{\sc Ahorro, Inversión y Cuenta Corriente}
+		\begin{minipage}[t]{0.48\textwidth}
+			\begin{center}
+				\begin{tikzpicture}[scale=0.48]
+				\draw[-] (0,0)  -- (8,0)  node[right] {{\tiny$S,I$}}; 
+				\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r_{1}$}};
+				\draw[smooth, domain = 0.25:6.5, color=black]
+				plot (\x,{7-\x}) node[right] {{\tiny$I(r_{1}) $}};
+				\draw[smooth, domain = 0.25:7, color=black]
+				plot (\x,{0+\x}) node[right] {{\tiny$S(r_{1},Q_{1}^{0}) $}};
+				\draw[smooth, domain = 2.25:8, color=black]
+				plot (\x,{-2+\x}) node[right] {{\tiny$S(r_{1},Q_{1}^{1}) $}};
+				\draw[dotted, domain = 0:4.5, color=black]
+				plot (\x,{2.5}); 
+				\node[left] at (0,3.5) {$r_{c}^{0}$};
+				\draw[dotted, domain = 0:3.5, color=black]
+				plot (\x,{3.5}); 
+				\node[left] at (0,2.5) {$r_{c}^{1}$};
+				\draw[dotted, domain = 0:8, color=black]
+				plot (\x,{1}); 
+				\node[left] at (0,1) {$r^{*}$};
+				\draw[dotted, domain = 1:0, color=black]
+				plot (1,{\x}); 
+				\node[below] at (1,0) {{\tiny$S_{1}^{0}$}};
+				\draw[dotted, domain = 1:0, color=black]
+				plot (3,{\x}); 
+				\node[below] at (3,0) {{\tiny$S_{1}^{1}$}};
+				\draw[dotted, domain = 1:0, color=black]
+				plot (6,{\x}); 
+				\node[below] at (6,0) {{\tiny$I_{1}^{0}$}};
+				\end{tikzpicture}
+			\end{center}		
+		\end{minipage} \hfill \begin{minipage}[t]{0.48\textwidth}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.48]
+			\draw[-] (-4,0)  -- (4,0)  node[right] {{\tiny $CA$}}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r_{1}$}};
+			\draw[smooth, domain = -3:4, color=black]
+			plot (\x,{3.5+\x}) node[right] {{\tiny $CA(r_{1},Q_{1}^{0}) $}};
+			\draw[smooth, domain = -1:4, color=black]
+			plot (\x,{1.5+\x}) node[right] {{\tiny $CA(r_{1},Q_{1}^{1}) $}};
+			\draw[dotted, domain = -4:4, color=black]
+			plot (\x,{1}); 
+			\draw[dotted, domain = 1:0, color=black]
+			plot (-2.5,{\x}); 
+			\node[below] at (-2.5,0) {{\tiny$CA_{1}^{0}$}};
+			\draw[dotted, domain = 1:0, color=black]
+			plot (-0.5,{\x}); 
+			\node[below] at (-0.5,0) {{\tiny$CA_{1}^{1}$}};
+			\end{tikzpicture}
+		\end{center}
+	\end{minipage}
+	\label{IV_G2}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=5]
+	\frametitle{{\normalsize AJUSTE EXTERNO SURGIMIENTO DE INVERSIÓN} {}}
+	\begin{figure}[H]
+		\renewcommand{\figurename}{Figura}
+		\caption{\sc Ahorro, Inversión y Cuenta Corriente}
+		\begin{minipage}[t]{0.48\textwidth}
+			\begin{center}
+				\begin{tikzpicture}[scale=0.48]
+				\draw[-] (0,0)  -- (8,0)  node[right] {{\tiny$S,I$}}; 
+				\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r_{1}$}};
+				\draw[smooth, domain = 6.5:0.25, color=black]
+				plot (\x,{7-\x}) node[right] {{\tiny$I^{0}(r_{1}) $}};
+				\draw[smooth, domain = 7.5:2.25, color=blue]
+				plot (\x,{8-\x}) node[right] {{\tiny$I^{1}(r_{1}) $}};
+				\draw[smooth, domain = 0.25:6, color=black]
+				plot (\x,{0+\x}) node[right] {{\tiny$S^{0}(r_{1},Q_{1}) $}};
+				\draw[smooth, domain = 0.75:6.75, color=blue]
+				plot (\x,{0.75+\x}) node[right] {{\tiny$S^{1}(r_{1},Q_{1}) $}};
+				\draw[dotted, domain = 0:3.5, color=black]
+				plot (\x,{3.5}); 
+				\node[left] at (0,3.5) {{\tiny$r_{c}^{0}$}};
+				\draw[dotted, domain = 0:3.625, color=black]
+				plot (\x,{4.375}); 
+				\node[left] at (0,4.375) {{\tiny$r_{c}^{1}$}};
+				\draw[dotted, domain = 0:8, color=black]
+				plot (\x,{2}); 
+				\node[left] at (0,2) {$r^{*}$};
+				\draw[dotted, domain = 2:0, color=black]
+				plot (1.25,{\x}); 
+				\node[below] at (1.25,0) {{\tiny$S_{1}^{1}$}};
+				\draw[dotted, domain = 2:0, color=black]
+				plot (2,{\x}); 
+				\node[below] at (2,0) {{\tiny$S_{1}^{0}$}};
+				\draw[dotted, domain = 2:0, color=black]
+				plot (5,{\x}); 
+				\node[below] at (5,0) {{\tiny$I_{1}^{0}$}};
+				\draw[dotted, domain = 2:0, color=black]
+				plot (6,{\x}); 
+				\node[below] at (6,0) {{\tiny$I_{1}^{1}$}};
+				\end{tikzpicture}
+			\end{center}		
+		\end{minipage} \hfill \begin{minipage}[t]{0.48\textwidth}
+		\begin{center}
+			\begin{tikzpicture}[scale=0.48]
+			\draw[-] (-4,0)  -- (4,0)  node[right] {{\tiny $CA$}}; 
+			\draw[-] (0,0)  -- (0,8)  node[left]  {{\tiny$r_{1}$}};
+			\draw[smooth, domain = -3:3, color=black]
+			plot (\x,{3.5+\x}) node[right] {{\tiny $CA^{0}(r_{1},Q_{1}) $}};
+			\draw[smooth, domain = -4:3, color=blue]
+			plot (\x,{4.5+\x}) node[right] {{\tiny $CA^{1}(r_{1},Q_{1}) $}};
+			\draw[dotted, domain = -4:4, color=black]
+			plot (\x,{2}); 
+			\draw[dotted, domain = 2:0, color=black]
+			plot (-1.5,{\x}); 
+			\node[below] at (-1.5,0) {{\tiny$CA_{1}^{0}$}};
+			\draw[dotted, domain = 2:0, color=black]
+			plot (-2.5,{\x}); 
+			\node[below] at (-2.5,0) {{\tiny$CA_{1}^{1}$}};
+			\end{tikzpicture}
+		\end{center}
+	\end{minipage}
+	\label{IV_G4}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=6]
+	\frametitle{{\normalsize AJUSTE EXTERNO PREMIO POR RISGO PAÍS} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-4,0)  -- (4,0)  node[right] {$CA$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3:3, color=black]
+		plot (\x,{3.5+\x}) node[right] {$CA(r_{1},Q_{1}) $};
+		\draw[dotted, domain = -4:0, color=black]
+		plot (\x,{3}) node[right] {$r^{*}+\rho  $};
+		\draw[dotted, domain = -4:0, color=black]
+		plot (\x,{1}) node[right] {$r^{*} $};
+		\draw[dotted, domain = 1:0, color=black]
+		plot (-2.5,{\x}); 
+		\node[below] at (-2.5,0) {$ $};
+		\draw[dotted, domain = 3:0, color=black]
+		plot (-0.5,{\x}); 
+		\node[below] at (-0.5,0) {$CA^{0}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=7]
+	\frametitle{{\normalsize AJUSTE EXTERNO PREMIO POR RISGO PAÍS} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-5,0)  -- (5,0)  node[right] {$CA$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3.5:3, color=black]
+		plot (\x,{3.5+\x}) node[right] {$CA^{0}(r_{1},Q_{1}) $};
+		\draw[smooth, domain = -5:2.5, color=black]
+		plot (\x,{5.5+\x}) node[right] {$CA^{1}(r_{1},Q_{1}) $};
+		\draw[dotted, domain = -5:0, color=black]
+		plot (\x,{1}) node[right] {$r^{*} $};
+		\draw[dashed, domain = 0:-5, color=black]
+		plot (\x,{1-0.5*\x}) node[right] {$r^{*}+\rho (-CA)  $};
+		\draw[dotted, domain = 1.83333:0, color=black]
+		plot (-1.667,{\x}); 
+		\node[below] at (-1.667,0) {$CA_{1}^{0}$};
+		\draw[dotted, domain = 2.5:0, color=black]
+		plot (-3,{\x}); 
+		\node[below] at (-3,0) {$CA_{1}^{1}$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=13]
+	\frametitle{{\normalsize AJUSTE EXTERNO ECONOMÍA GRANDE Y ABIERTA} {}}
+	En una economía grande y abierta supondremos que:
+	\begin{align}
+		CA^{US}+CA^{RW}&=0
+	\end{align}
+	En el gráfico siguiente se muestra el marco analítico de la determinación de la CA es de notar que para el caso de US este se mide de izquierda (-) a derecha (+) lo opuesto para el resto del mundo.
+	La conclusión es que los cambios en la CA no son tan pronunciado como en el caso de una economía pequeña.
+	
+\end{frame}
+
+\begin{frame}[label=8]
+	\frametitle{{\normalsize AJUSTE EXTERNO ECONOMÍA GRANDE Y ABIERTA} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-5,0)  node[left] {$CA^{RW}$} -- (5,0) node[right] {$CA^{US}$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3.5:3, color=black]
+		plot (\x,{3.5+\x}) node[right] {$CA^{US} $};
+		\draw[smooth, domain = -5:2.5, color=black]
+		plot (\x,{5.5+\x}) node[right] {$CA^{US'} $};
+		\draw[smooth, domain = 0.5:-4, color=black]
+		plot (\x,{1-1.5*\x}) node[right] {$ CA^{RW}$};
+		\draw[fill] (-1.8,3.7) circle [radius=2.5pt]	node[above] {$B$};
+		\draw[dotted, domain = 3.7:0, color=black]
+		plot (-1.8,{\x}); 
+		\draw[dotted, domain = -1.8:0, color=black]
+		plot ({\x},3.7); 
+		\draw[fill] (-1.0,2.5) circle [radius=2.5pt]	node[above] {$A$};
+		\draw[dotted, domain = 2.5:0, color=black]
+		plot (-1.0,{\x});
+		\draw[fill] (-3.0,2.5) circle [radius=2.5pt]	node[above] {$C$};
+		\draw[dotted, domain = 2.5:0, color=black]
+		plot (-3.0,{\x});
+		\draw[dotted, domain = -3.0:0, color=black]
+		plot ({\x},2.5); 
+		\draw[fill] (0,5.5) circle [radius=2.5pt]	node[above] {$D^{'}$};
+		\draw[fill] (0,3.5) circle [radius=2.5pt]	node[above] {$D$};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=13]
+	\frametitle{{\normalsize HIPÓTESIS DE LA SUPER-ABUNDANCIA DE AHORRO} {}}
+	Un hecho estilizado: US incrementó su déficit en CA entre 1995 a 2005 de 1.5\% al 6.0\% de su PIB. Luego de la gran crisis del 2007 su deficit cayó llegando al 3.0\% de su PIB. \\
+	Como explicar ese hecho estilizado se debe a factores externos o internos.\\
+	\cite{Bernanke2005} sostiene que es por factores externos; el resto del mundo tiene un exceso de ahorro sin incentivos a invertir ahí sino en US y por consecuencia US debe presentar un déficit de CA.\\
+	Específicamente Bernanke atribuye ese exceso de ahorro a:
+	\begin{enumerate}
+		\item Incremento en la acumulación de reservas internacionales en economía emergente como respuesta precautoria de las crisis de los 90.
+		\item Depreciación de las monedas del RW como políticas para impulsar sus exportaciones.
+	\end{enumerate}
+		
+\end{frame} 
+
+\begin{frame}[label=14]
+	\frametitle{{\normalsize HIPÓTESIS HECHO EN ESTADOS UNIDOS} {}}
+	Ante el mismo hecho estilizado hay otra hipótesis: Hecho en USA un resultado de la evolución económica de los USA.\\
+	 
+	Para el análisis de ambas hipótesis el marco analítico gráfico es útil. Es de notar que la diferencia en ambos hipótesis radica en el comportamiento de la tasa de interés.   
+	
+\end{frame} 
+
+\begin{frame}[label=9]
+	\frametitle{{\normalsize HIPÓTESIS DE LA SUPER-ABUNDANCIA DE AHORRO} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-5,0)  node[left] {$CA^{RW}$} -- (5,0) node[right] {$CA^{US}$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3.5:3, color=black]
+		plot (\x,{3.5+\x}) node[above] {$CA^{US}(r) $};
+		\draw[smooth, domain = 0.5:-4, color=black]
+		plot (\x,{1-1.5*\x}) node[above] {$ CA^{RW'}(r)$};
+		\draw[smooth, domain = 3:-2.0, color=black]
+		plot (\x,{5-1.5*\x}) node[above] {$ CA^{RW}(r)$};
+		\draw[fill] (0.6,4.1) circle [radius=2.5pt]	node[above] {$A$};
+		\draw[dotted, domain = 4.1:0, color=black]
+		plot (0.6,{\x}) node[below] {$ CA^{US^{0}}$}; 
+		\draw[dotted, domain = 0.6:0, color=black]
+		plot ({\x},4.1) node[left] {$ r*^{0}$}; 
+		\draw[fill] (-1.0,2.5) circle [radius=2.5pt]node[above] {$B$};
+		\draw[dotted, domain = 2.5:0, color=black]
+		plot (-1.0,{\x}) node[below] {$ CA^{US^{1}}$}; 
+		\draw[dotted, domain = -1.0:0, color=black]
+		plot ({\x},2.5) node[right] {$ r*^{1}$};
+		\draw[->, blue, ultra thick] (-1,6.5)  -- (-2.5,5) ; 
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}[label=10]
+	\frametitle{{\normalsize HIPÓTESIS HECHO EN ESTADOS UNIDOS} {}}
+	\begin{center}
+		\begin{tikzpicture}[scale=0.8]
+		\draw[-] (-5,0)  node[left] {$CA^{RW}$} -- (5,0) node[right] {$CA^{US}$}; 
+		\draw[-] (0,0)  -- (0,8)  node[left]  {$r_{1}$};
+		\draw[smooth, domain = -3.5:3, color=black]
+		plot (\x,{3.5+\x}) node[above] {$CA^{US}(r) $};
+		\draw[smooth, domain = -5.5:1.0, color=black]
+		plot (\x,{7+\x}) node[above] {$CA^{US'}(r) $};
+		\draw[smooth, domain = 3:-2.0, color=black]
+		plot (\x,{5-1.5*\x}) node[above] {$ CA^{RW}(r)$};
+		\draw[fill] (0.6,4.1) circle [radius=2.5pt]	node[above] {$A$};
+		\draw[dotted, domain = 4.1:0, color=black]
+		plot (0.6,{\x}) node[below] {$ CA^{US^{0}}$}; 
+		\draw[dotted, domain = 0.6:0, color=black]
+		plot ({\x},4.1) node[left] {$ r*^{0}$}; 
+		\draw[fill] (-1.33,5.666) circle [radius=2.5pt]	node[above] {$B$};
+		\draw[dotted, domain = 5.666:0, color=black]
+		plot (-1.33,{\x}) node[below] {$ CA^{US^{1}}$}; 
+		\draw[dotted, domain = -1.33:0, color=black]
+		plot ({\x},5.66) node[right] {$ r*^{1}$};
+		\draw[->, blue, ultra thick] (-3,0.5)  -- (-4.25,2.375) ; 
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+\begin{frame}[label=15]
+	\frametitle{{\normalsize HIPÓTESIS DE LA SUPER-ABUNDANCIA DE AHORRO} {}}
+	Sí bien la Hipótesis de la super-abundancia de ahorro parece explicar en el comportamiento de la CA antes de la crisis, ¿cómo se explica después de la crisis?\\
+	
+	
+	 
+	
+\end{frame} 
+
+	\begin{frame}
+		\frametitle{{\large 
+				Bibliografía}}
+		\renewcommand{\refname}{Referencias}
+		\bibliography{Biblioteca}
+		\bibliographystyle{flexbib}
+	\end{frame}
+
+
+\end{document}

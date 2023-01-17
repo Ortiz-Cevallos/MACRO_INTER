@@ -1,0 +1,135 @@
+\usepackage[top=0.7in, bottom=2.0in, left=1.25in, right=1in]{geometry}
+%\usepackage[x11names]{xcolor}  % para utilizar colores
+\usepackage{tabu, colortbl, multirow, ctable} % crear tablas
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{graphicx}  % insertar figuras
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+\setmainfont[BoldFont={Futura Md BT}]{Futura Lt BT}
+\usepackage[inline]{enumitem} % para personalizar enumeraciones
+\usepackage[framemethod=tikz]{mdframed}
+\setlength{\parindent}{0cm} %elimina sangría al inicio de los
+% Este bloque define los hipervínculos
+\definecolor{ocre}{RGB}{0,0,146}
+\definecolor{color1}{RGB}{255,255,255}
+\definecolor{azul}{RGB}{0,0,146}
+\newcommand{\NOTA}{No. 134, junio 2022}	  %
+%-------------------------------------------------------------------------------
+\usepackage{hyperref}  % hipervínculos
+\hypersetup{
+	bookmarks=true,         % show bookmarks bar?
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,          % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=blue            % color of external links
+}
+%  Este bloque diseña el encabezado que aparece en cada página
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength\headheight{3.0cm}
+\rhead{%
+	\begin{tabular}{c @{\hspace{0.5cm}} c @{\hspace{2.0cm}}}
+	\multirow{5}{*}{\hspace{0.0cm}\includegraphics[width=0.15\textwidth]{Logo.jpg}}&\\
+		& \LARGE{\bfseries Notas Económicas Regionales} \\%\cline{2-2}
+		&\\
+		& \vspace{0.3cm} \hspace{-0.5cm}  \large{Secretaría Ejecutiva del Consejo Monetario Centroamericano} \\
+		& \vspace{-0.2cm} \small{\NOTA}
+\end{tabular}
+}
+%-------------------------------------------------------------------------------
+
+%BIBLIOGRAFÍA
+\usepackage[%
+bibstyle=authoryear,%
+citestyle=authoryear-icomp,%
+sorting=nyt,%
+backend=bibtex,%
+url=false,%
+uniquename=false,%
+doi=false,%
+bibencoding=utf8%
+]{biblatex}
+\addbibresource{REFERENCIA_2.bib}
+\DefineBibliographyStrings{spanish}{
+andothers={et~al.\adddot}
+}
+
+%  Este bloque redefine el título del documento (portada)
+%
+\makeatletter
+\def\@maketitle{%
+	\newpage
+	\null
+	\vskip 0.5em%
+	\begin{center}%
+		\let \footnote \thanks
+		{\large \@title \par}%
+		\vskip 0.7em%
+	\end{center}%
+	\par
+	\vskip 1.5em}
+%\fi
+\makeatother
+
+
+%******************FINAL DE LA PLANTILLA************************************************
+\usepackage{float}
+\usepackage{lscape}
+
+%\onehalfspacing
+\title{Propuesta para la identificación de los efectos dinámicos en las remesas provenientes de Estados Unidos de América\thanks{Las ideas y opiniones en la presente nota no corresponden a las del Consejo Monetario Centroamericano (CMCA) o sus miembros. Los errores u omisiones son responsabilidad exclusiva de su autor. Se agradece a Juan Izaguirre por facilitar datos para la elaboración de esta nota.}
+\\
+\lineskip .5em
+\begin{tabular}{ccc}
+& & \\
+\hspace{0.01em}%
+     & Luis Ortiz Cevallos\footnote{Economista en la Secretaría Ejecutiva del Consejo Monetario Centroamericano.} & \\
+    \hspace{0.01em}%
+    &
+		\href{mailto:lortiz@secmca.org}{lortiz@secmca.org} & \\
+\end{tabular}
+}  % AJUSTAR TÍTULO
+
+
+\makeatletter
+\pgfdeclareshape{datastore}{
+	\inheritsavedanchors[from=rectangle]
+	\inheritanchorborder[from=rectangle]
+	\inheritanchor[from=rectangle]{center}
+	\inheritanchor[from=rectangle]{base}
+	\inheritanchor[from=rectangle]{north}
+	\inheritanchor[from=rectangle]{north east}
+	\inheritanchor[from=rectangle]{east}
+	\inheritanchor[from=rectangle]{south east}
+	\inheritanchor[from=rectangle]{south}
+	\inheritanchor[from=rectangle]{south west}
+	\inheritanchor[from=rectangle]{west}
+	\inheritanchor[from=rectangle]{north west}
+	\backgroundpath{
+		%  store lower right in xa/ya and upper right in xb/yb
+		\southwest \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+		\northeast \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+		\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}}
+		\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}}
+		\pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@yb}}
+		\pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}}
+	}
+}
+\makeatother

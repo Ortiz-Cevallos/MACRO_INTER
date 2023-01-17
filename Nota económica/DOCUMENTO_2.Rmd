@@ -1,0 +1,148 @@
+
+\maketitle
+
+\thispagestyle{fancy}
+
+\vspace{-1.0cm}\section*{Introducción.}
+
+En El Salvador, Guatemala y Honduras el 90\% de las remesas que estos países reciben provienen de Estados Unidos de América (EUA). Las remesas totales equivalen en El Salvador, Guatemala y Honduras aproximadamente el 25.0\%, 16.0\% y 23.0\% de su respectivo Producto Interno Bruto (PIB) (\textcite{BCR1}, \textcite{WB1} y \textcite{SECMCA1}). Para estas economías, las fluctuaciones de este flujo de ingreso podrían tener efectos importantes sobre su sector real y financiero, resultando útil para el diseño de políticas identificar las fuentes de esas fluctuaciones. 
+
+En esta nota interpreto las fluctuaciones de las remesas provenientes de EUA como producto de innovaciones o shocks de dos tipos. El primero, como innovaciones de demanda, la cuales clasifico en convencionales y extraordinarias, y el segundo, como innovaciones tecnológicas, siendo éstas, por ejemplo, las relacionadas con los cambios en los canales a través de los cuales se envían las remesas o en los hábitos de quienes las envían.
+
+Esta identificación se hace a partir de la estimación de un Vector Autorregresivo Estructural (SVAR por sus siglas en inglés) en el que incluyo como variables la tasa de desempleo latino, la tasa de crecimiento de las transferencias corrientes en términos reales del gobierno, ambas correspondientes a EUA, y la tasa de crecimiento de las remesas en términos reales\footnote{En adelante las expresiones remesas y transferencias corrientes del gobierno se referiran a series en términos reales.}. La interpretación del SVAR es que las fluctuaciones en el desempleo y en las transferencias están dadas por innovaciones llamadas de demanda convencional y extraordinarias, respectivamente, las cuales no tienen efectos permanentes sobre las remesas; en cambio, las fluctuaciones en la evolución de las remesas vienen dadas por innovaciones llamadas tecnológicas con efectos permanentes sobre su nivel.    
+
+Tras aplicar esta estrategia de identificación para el caso de El Salvador encuentro,  primero, que las innovaciones de demanda convencionales, las que provocan cambios temporales en el empleo, generan una respuesta de las remesas en el sentido esperado, esta respuesta se da en forma de joroba (hump-shaped) alcanzando su punto máximo después del primer año y desapareciendo luego del cuarto año. Segundo, al reconstruir la serie de las remesas suponiendo que las innovaciones tecnológicas son cero, es posible apreciar la importancia que tuvieron durante el período de la pandemia por Covid-19 las políticas de demanda extraordinarias como  las transferencias corrientes del gobierno de EUA. Y tercero, que el 40.0\% de las
+variaciones de corto plazo en las remesas obedecen a perturbaciones de demanda, de las cuales el 90.0\% son convencionales en el sentido de que pueden ser identificadas a través del desempleo latino en EUA.
+
+La nota la organizo en cuatro secciones adicionales; en la siguiente, presento hechos estilizados relacionados con la dinámica de las remesas y los factores que pueden explicarlas. En la tercera sección, presento la metodología para la identificación de los efectos tecnológicos y de demanda sobre las remesas; en la cuarta sección aplico la metodología para el caso de El Salvador y, finalmente, planteo conclusiones.
+
+
+\section*{Hechos estilizados}
+
+\vspace{0.3cm}Las remesas son recursos que los migrantes transfieren desde el país en el que residen hacia el país del que proceden. Estos recursos se originan a partir de remuneraciones que los migrantes reciben por su trabajo, por lo anterior,  un factor importante para su determinación  es la estrechez u holgura en el mercado laboral del país donde el migrante trabaja.
+
+\vspace{0.3cm}Particularmente en EUA, un hecho estilizado es que las variaciones en la tasa de desempleo suele relacionarse en el corto plazo con fluctuaciones en la actividad económica (ver \textcite{Mankiw}). Esta relación, conocida como Ley de Okun (ver \textcite{Okun}), implica que las innovaciones o shocks en la demanda agregada afecten a través del desempleo el flujo de remesas.
+
+\vspace{0.3cm}Sin embargo, durante la recesión provocada por la pandemia de COVID-19, en países como El Salvador, Guatemala, Honduras y República Dominicana la caída de las remesas estuvo en sincronía con el incremento de la tasa de desempleo latino en EUA, similar a un evento adverso de demanda. No obstante, como se observa en la figura \ref{CERO}, la restauración de la tasa de desempleo latino no explica la fuerte recuperación de las remesas, la cual parecería entonces haber sido impulsada por políticas de demanda extraordinarias como el apoyo del gobierno de EUA a través de transferencias corrientes.       
+
+\vspace{0.3cm}Por otro lado, las remesas pueden verse afectadas por otros factores, como por ejemplo, cambios en el costo del canal de envío, en las preferencias entre diferentes canales de envío y en  las expectativas sobre el estatus migratorio. Estos factores son independientes del ciclo económico del país donde el migrante trabaja, razón que me permite agruparlos dentro de una categoría aparte, la que llamo innovaciones tecnológicas. 
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm}Evolución de la tasa de desempleo latino en EUA, tasa de crecimiento de las transferencias corrientes del gobierno en EUA y la tasa de crecimiento interanual de las remesas en El Salvador.}
+\label{CERO}
+\centering 
+\includegraphics[width=13.5cm]{remvsu}
+\end{figure}
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Fuente:} Elaboración propia con  base en \textcite{TRANS}, \textcite{Board} y \textcite{SECMCADATOS}.}\end{singlespace}
+
+En efecto, la figura \ref{inicio} ilustra para los casos de Guatemala y Honduras otros hechos estilizados ocurridos a partir del cierre de las fronteras por la pandemia de COVID-19. El primer hecho, es que en ambos países el ritmo de crecimiento de las remesas se recuperó de forma rápida en comparación con el número de entradas de personas a través de sus fronteras, las cuales aún no alcanza los niveles pre-pandemia. El segundo hecho, es que debido al cierre de fronteras las remesas de bolsillo cayeron\footnote{De acuerdo con el \textcite{BCH} el 69.1\% del total de entrevistados revelan haber otorgado remesas de bolsillos (dinero que los migrantes transportan por sí mismos desde su país de residencia y que es entregado a sus beneficiarios en su país de origen)}. No obstante, a medida aumente el número de personas que entran a estos países el ritmo de crecimiento anual en las remesas será menor debido a que parte de las remesas volverán a ser del tipo de bolsillo, las que son más complicadas de medir. 
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm}Número de entradas de personas a través de las fronteras y tasa de crecimiento interanual de las remesas.}
+\label{inicio}
+\centering 
+\includegraphics[width=15.0cm]{HN_REM_TUR}
+\end{figure}
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Nota:} Como entradas de personas se consideran a los visitantes no residentes que viajaron hacia Guatemala y Honduras.}\end{singlespace}
+\vspace{-0.5cm}\begin{singlespace}{\footnotesize{\bf Fuente:} Elaboración propia con base en \textcite{INGUAT}, \textcite{INE} y \textcite{SECMCADATOS}.}\end{singlespace}
+
+\vspace{0.3cm}Los hechos anteriores significan que el efecto de la pandemia sobre las remesas podría ser persistente, debido a que algunos canales para su transferencia han demorado en recuperarse, haciendo que los migrantes elijan otros. Esa elección podría ser en algunos casos duradera, provocando un cambio permanente. Lo anterior implica que las remesas deban ser analizadas como una serie generada por un proceso con tendencia estocástica en el que los shocks como los tecnológicos se acumulen a lo largo del tiempo.  
+
+\section*{Metodología}
+
+Con el objeto de identificar las innovaciones tecnológicas y las de demanda, ya sea convencionales o extraordinarias, y sus efectos sobre las remesas, sigo la metodología propuesta por \textcite{BLANCHARD88} y estimo la forma reducida de un Vector Autorregresivo (VAR por sus siglas) integrado por la tasa de crecimiento de las remesas ($\Delta y_{t}$), tasa de crecimiento de las transferencias corrientes del gobierno de EUA ($\Delta x_{t}$) y el desempleo latino en EUA ($u_{t}$). La representación de este VAR como un proceso de media móviles está dado por:
+
+\begin{equation}
+X_{t}=\left( \begin{array}{c}
+\Delta y_{t} \\
+\Delta x_{t} \\
+u_{t}
+\end{array}
+\right)=A(L)e_{t}
+\label{e1}
+\end{equation} 
+
+Considero $A(0)=I$ y $\Sigma_e=E(e e^{\tau})$ como la matriz de varianza y covarianza de la forma reducida del VAR mostrado en \ref{e1}. Y supongo, primero, que las remesas, las transferencias corrientes y el desempleo latino en EUA son producidos a través de tres procesos estructurales independientes con shocks de varianza unitaria. Y segundo, que uno de esos procesos, el de las innovaciones tecnológicas, es el responsable de la tendencia estocástica observada en las remesas. Con base en lo anterior, defino un VAR estructural cuya representación como un proceso de medias móviles es el siguiente: 
+
+\begin{equation}
+X_{t}=C(L)\epsilon_{t}=\left( \begin{array}{ccc}
+C_{1,1}(L) & C_{1,2}(L) & C_{1,3}(L)\\
+C_{2,1}(L) & C_{2,2}(L) & C_{2,3}(L)\\
+C_{3,1}(L) & C_{3,2}(L) & C_{3,3}(L)
+\end{array}
+\right)\epsilon_{t}
+\label{e2}
+\end{equation} 
+
+Siendo $\Sigma_{\epsilon}=E(\epsilon \epsilon^{\tau})=I$ la matriz de varianza y covarianza de los shocks estructurales, los cuales son independientes y con varianza unitaria, y $C_{1,2}(1)=C_{1,3}(1)=0$, indicando que los shocks de demanda convencionales y extraordinarios sobre las variables tasa de desempleo y tasa de crecimiento de las transferencias corrientes, en su orden, no tienen efectos de largo plazo en las remesas.
+
+\section*{Aplicación}
+
+La metodología descrita en la anterior sección la aplico en el caso de El Salvador, país donde más del 90\% de las remesas que recibe proceden de EUA; la serie que utilizo son las remesas recibidas en frecuencia trimestral correspondiente al período del primer trimestre 2002 al primer trimestre 2022.
+
+Previo a estimar el VAR, transformo las series remesas y transferencias corrientes del gobierno de EUA en términos reales deflactándolas con el índice de precio del consumidor de EUA, luego les aplico logaritmo y deduzco sus diferencias interanuales. Estas variables junto con la tasa de desempleo latino en EUA conforman un VAR como el mostrado por la ecuación \ref{e1}.
+ 
+Estimo ese VAR con dos rezagos, deduzco la matriz C(L) de la ecuación \ref{e2} y obtengo los errores estructurales\footnote{La prueba de selección de rezagos y los resultados de la estimación del VAR se encuentran en los cuadros \ref{anex_2} y  \ref{anex_3}, respectivamente, del anexo.}. Habiendo identificado el SVAR, elaboro una función impulso respuesta con el objeto de conocer la dinámica de la tasa de crecimiento interanual de las remesas ante un shock en el nivel de desempleo latino en EUA.
+
+La figura \ref{DOS}, muestra esa función impulso respuesta indicando que ante un shock de demanda convencional que reduce el nivel de desempleo latino en EUA las remesas responden incrementando progresivamente su ritmo de crecimiento anual, hasta alcanzar su punto máximo, cerca de 7.5\% en torno al primer año, y a partir de esa fecha la tasa de crecimiento se ralentiza hasta llegar gradualmente a cero luego del cuarto año.   
+
+Un segundo resultado que obtengo son los componentes de demanda de las remesas recibidas en El Salvador; las cuales son las sendas históricas de las remesas suponiendo que no existen shocks tecnológicos. Como se muestra en \textcite{Canova}, la metodología que aplico es una alternativa para extraer de una serie su ciclo similar al uso de filtros univariados como los propuestos por \textcite{Prescott} y \textcite{Hamilton}.
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm} Función impulso respuesta de la tasa de crecimiento interanual de las remesas ante un shock de demanda convencional.}
+\label{DOS}
+\centering 
+\includegraphics[width=14.0cm]{SV_IRF}
+\end{figure}
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Fuente:} Elaboración propia con base en \textcite{TRANS}, \textcite{Board1}, \textcite{Board} y \textcite{SECMCADATOS}.}\end{singlespace}
+
+La figura \ref{TRES}, muestra la senda histórica de los componentes de demanda de las remesas recibidas por El Salvador junto con los episodios de recesión identificados en la economía de EUA a través del indicador provisto por el National Bureau of Economic Research y disponible en \textcite{Board2}. Notablemente, episodios recesivos en la economía de EUA anteceden períodos en que el componente de demanda convencional de la tasa de crecimiento de las remesas se ralentiza volviéndose inclusive negativo y al concluir esos episodios ese componente inicia un período de recuperación.
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm} Fluctuaciones en la tasa de crecimiento interanual de las remesas recibidas en El Salvador ante shocks de demanda.}
+\label{TRES}
+\centering 
+\includegraphics[width=14.0cm]{SV_2}
+\end{figure}
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Fuente:} Elaboración propia con base en  \textcite{TRANS}, \textcite{Board2}, \textcite{Board1},  \textcite{Board} y \textcite{SECMCADATOS}.}\end{singlespace}
+
+Particularmente, durante la recesión en EUA por la crisis financiera global (CFG), datada de enero 2008 a junio 2009, el componente de la demanda convencional de las remesas inicia un período de decrecimiento llegando al punto más bajo en el primer trimestre 2010 con una tasa anual de decrecimiento del 4.4\%; a partir de esa fecha, la tasa de crecimiento de ese componente de las remesas experimenta una lenta recuperación alcanzando valores positivos y sostenidos hasta el segundo trimestre 2017. Esta lenta recuperación está asociada con la dinámica del desempleo latino en EUA, la cual presenta durante la CFG alta persistencia  en comparación a las dos recesiones que la antecede y, en especial, con la recesión provocada por la pandemia de COVID-19 (ver figura \ref{CUATRO}). 
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm} Dinámica de la tasa de desempleo latino en EUA durante las últimas recesiones.}
+\label{CUATRO}
+\centering 
+\includegraphics[width=15.0cm]{RECESIÓN}
+\end{figure}
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Nota:} El índice se construye dividiendo cada tasa de desempleo por la tasa observada en el trimestre previo a señalarse una recesión (trimestre -1). Las recesiones son señaladas con el indicador del National Bureau of Economic Research.}\end{singlespace}
+\vspace{-0.5cm}\begin{singlespace}{\footnotesize{\bf Fuente:} Elaboración propia con base en \textcite{Board2} y \textcite{Board}.}\end{singlespace}
+
+Finalmente, la figura \ref{CINCO} muestra la descomposición de la varianza del error de pronóstico de la tasa de crecimiento de las remesas, lo que permite cuantificar que tan importante es cada shock en explicar su variación. Las perturbaciones tecnológicas son las que mayor contribución tienen en la variación de las remesas; mientras en el corto plazo, las perturbaciones de demanda convencional representan el 35.0\% de la variación total, tal contribución baja hasta establecerse en un 25.0\% en horizontes de pronósticos más largos.
+
+
+\begin{figure}[H]
+\centering  
+\caption{\hspace{0.3cm} Descomposición de la varianza de la tasa de crecimiento interanual de las remesas de El Salvador.}
+\label{CINCO}
+\centering 
+\includegraphics[width=15.0cm]{BQFDV}
+\end{figure}
+\vspace{-1.0cm}\begin{singlespace}{\footnotesize{\bf Fuente:} Elaboración propia con base en \textcite{TRANS}, \textcite{Board1}, \textcite{Board} y \textcite{SECMCADATOS}.}\end{singlespace}
+
+\section*{Conclusiones}
+
+Los movimientos de la tasa de desempleo latino en EUA parecen seguir siendo importantes para conocer el desempeño transitorio o cíclico del flujo de remesas para países como El Salvador. No obstante, como se señala en \textcite{Alina}, durante la pandemia por COVID-19 esta variable vio mermada dicha importancia al no poder identificar la fuerte recuperación de las remesas. 
+
+Sin embargo, los movimientos del desempleo en EUA son la expresión de un fundamento; las variaciones en la demanda agregada, la cual en situaciones extraordinarias como una pandemia pueden manifestarse a través de otras variables como las transferencias corrientes del gobierno. Considerando ese hecho, identifico que en el caso de El Salvador el 40.0\% de las variaciones en las remesas en el corto plazo obedecen a perturbaciones de demanda de las cuales el 90.0\% son convencionales en el sentido de que pueden ser identificadas a través del desempleo latino. 
+
+El hallazgo anterior obedece a considerar a las remesas como un proceso con tendencia estocástica que se ve afectada por una serie de perturbaciones ortogonales a las de la demanda en EUA. En efecto, en la última década, las transferencias de remesas han sufrido alteraciones permanentes por factores como cambios en los canales de envíos o en el estatus migratorio de quienes las envían, por lo que es de esperar que ante un evento extraordinario como la pandemia las remesas presenten variaciones duraderas. 
+
+
+
+
+
